@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Realizar cotizacion de vehiculo #2" tests="1" skipped="0" failures="1" errors="0" timestamp="2024-03-08T20:27:51" hostname="CHMEPPF352VA2" time="110.599">
+  <properties/>
+  <testcase name="Cotización persona natural existente, codigo fasecolda, con datos adicionales, con vehiculo en leasing y conductor habitual - Backoffice" classname="Realizar cotizacion de vehiculo #2" time="110.599">
+    <failure message="java.lang.AssertionError: El elemento no se mostró en el tiempo establecido  " type="java.lang.AssertionError">java.lang.AssertionError: El elemento no se mostró en el tiempo establecido  
+	at org.junit.Assert.fail(Assert.java:89)
+	at co.com.cloud.inhub.auto.utils.ExceptionsProyecto.lanzarExcepcion(ExceptionsProyecto.java:110)
+	at co.com.cloud.inhub.auto.utils.ExceptionsProyecto.validaExcepcion(ExceptionsProyecto.java:86)
+	at co.com.cloud.inhub.auto.utils.AccionesWeb.excepcionAccionesWeb(AccionesWeb.java:1133)
+	at co.com.cloud.inhub.auto.utils.AccionesWeb.clickBoton(AccionesWeb.java:181)
+	at co.com.cloud.inhub.auto.steps.StepsDatosBasicos.diligenciarDatosBasicosDatosInspeccion(StepsDatosBasicos.java:23)
+	at co.com.cloud.inhub.auto.steps.StepsDatosBasicos$ByteBuddy$fyx1COfI.diligenciarDatosBasicosDatosInspeccion$accessor$cTjTbAkg(Unknown Source)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at net.thucydides.core.steps.BaseMethodRunner.invokeMethod(BaseMethodRunner.java:18)
+	at net.thucydides.core.steps.NormalMethodRunner.invokeMethodAndNotifyFailures(NormalMethodRunner.java:18)
+	at net.thucydides.core.steps.StepInterceptor.runNormalMethod(StepInterceptor.java:406)
+	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:191)
+	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:84)
+	at net.thucydides.core.steps.ProxyConfiguration$InterceptorDispatcher.intercept(ProxyConfiguration.java:51)
+	at co.com.cloud.inhub.auto.steps.StepsDatosBasicos$ByteBuddy$fyx1COfI.diligenciarDatosBasicosDatosInspeccion(Unknown Source)
+	at co.com.cloud.inhub.auto.stepdefinitions.CotizarVehiculoStepDefinitions.diligencioLosCamposNecesariosEnElFormularioDatosBasicos(CotizarVehiculoStepDefinitions.java:49)
+	at ✽.Diligencio los campos necesarios en el formulario Datos Basicos(file:///C:/Users/jvalenciad/Documents/IntelliJ/FDP/src/test/resources/features/cotizar_vehiculo.feature:11)
+</failure>
+  </testcase>
+  <system-out><![CDATA[
+@CP001 @regresion.backoffice @regresion
+Scenario: CotizaciÃ³n persona natural existente, codigo fasecolda, con datos adicionales, con vehiculo en leasing y conductor habitual - Backoffice ?[90m# src/test/resources/features/cotizar_vehiculo.feature:7?[0m
+  ?[32mGiven ?[0m?[32mDeseo realizar cotizacion de un vehiculo?[0m                                                                                                   ?[90m# co.com.cloud.inhub.auto.stepdefinitions.CotizarVehiculoStepDefinitions.deseoRealizarCotizacionDeUnVehiculo()?[0m
+  ?[32mWhen ?[0m?[32mElijo la opcion Cotizar Automotores?[0m                                                                                                         ?[90m# co.com.cloud.inhub.auto.stepdefinitions.CotizarVehiculoStepDefinitions.elijoLaOpcionCotizarAutomotores()?[0m
+  ?[32mAnd ?[0m?[32mConsulto y elijo el asesor que cotizara ?[0m?[32m?[1m""?[0m?[32m con tipo ?[0m?[32m?[1m"BackOffice"?[0m                                                                             ?[90m# co.com.cloud.inhub.auto.stepdefinitions.CotizarVehiculoStepDefinitions.consultoYElijoElAsesorQueCotizaraConTipo(java.lang.String,java.lang.String)?[0m
+  ?[31mAnd ?[0m?[31mDiligencio los campos necesarios en el formulario Datos Basicos?[0m                                                                              ?[90m# co.com.cloud.inhub.auto.stepdefinitions.CotizarVehiculoStepDefinitions.diligencioLosCamposNecesariosEnElFormularioDatosBasicos(co.com.cloud.inhub.auto.models.DatosBasicosModel)?[0m
+    | tipoId               | id      | genero   | fecha    | optPlaca | optFasecolda | fasecolda | servicio   | zona   | placa   | valorAsegurado | marca | linea            | clase     | modelo |
+    | Cedula De Ciudadania | [empty] | Femenino | 10061996 | No       | Si           | [empty]   | Particular | Bogota | [empty] | 50000000       | MAZDA | 121 LX MT 1300CC | Automovil | 2024   |
+      ?[31mjava.lang.AssertionError: El elemento no se mostrÃ³ en el tiempo establecido  
+	at org.junit.Assert.fail(Assert.java:89)
+	at co.com.cloud.inhub.auto.utils.ExceptionsProyecto.lanzarExcepcion(ExceptionsProyecto.java:110)
+	at co.com.cloud.inhub.auto.utils.ExceptionsProyecto.validaExcepcion(ExceptionsProyecto.java:86)
+	at co.com.cloud.inhub.auto.utils.AccionesWeb.excepcionAccionesWeb(AccionesWeb.java:1133)
+	at co.com.cloud.inhub.auto.utils.AccionesWeb.clickBoton(AccionesWeb.java:181)
+	at co.com.cloud.inhub.auto.steps.StepsDatosBasicos.diligenciarDatosBasicosDatosInspeccion(StepsDatosBasicos.java:23)
+	at co.com.cloud.inhub.auto.steps.StepsDatosBasicos$ByteBuddy$fyx1COfI.diligenciarDatosBasicosDatosInspeccion$accessor$cTjTbAkg(Unknown Source)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at net.thucydides.core.steps.BaseMethodRunner.invokeMethod(BaseMethodRunner.java:18)
+	at net.thucydides.core.steps.NormalMethodRunner.invokeMethodAndNotifyFailures(NormalMethodRunner.java:18)
+	at net.thucydides.core.steps.StepInterceptor.runNormalMethod(StepInterceptor.java:406)
+	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:191)
+	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:84)
+	at net.thucydides.core.steps.ProxyConfiguration$InterceptorDispatcher.intercept(ProxyConfiguration.java:51)
+	at co.com.cloud.inhub.auto.steps.StepsDatosBasicos$ByteBuddy$fyx1COfI.diligenciarDatosBasicosDatosInspeccion(Unknown Source)
+	at co.com.cloud.inhub.auto.stepdefinitions.CotizarVehiculoStepDefinitions.diligencioLosCamposNecesariosEnElFormularioDatosBasicos(CotizarVehiculoStepDefinitions.java:49)
+	at âœ½.Diligencio los campos necesarios en el formulario Datos Basicos(file:///C:/Users/jvalenciad/Documents/IntelliJ/FDP/src/test/resources/features/cotizar_vehiculo.feature:11)
+?[0m
+  ?[36mAnd ?[0m?[36mDiligencio los campos necesarios en el formulario Datos Adicionales?[0m                                                                          ?[90m# co.com.cloud.inhub.auto.stepdefinitions.CotizarVehiculoStepDefinitions.diligencioLosCamposNecesariosEnElFormularioDatosAdicionales(co.com.cloud.inhub.auto.models.DatosAdicionalesModel)?[0m
+    | optAccesorios | valorAccesorios | optBlindaje | valorBlindaje | optLocatario | tipoIdLocatario      | idLocatario | nombreLocatario | generoLocatario | fechaLocatario | optHabitual | tipoIdHabitual       | idHabitual | nombreHabitual | generoHabitual | fechaHabitual |
+    | Si            | [empty]         | Si          | [empty]       | Si           | Cedula De Ciudadania | 125898713   | Cliente AXA     | Femenino        | 10061996       | Si          | Cedula De Ciudadania | 89563247   | Habitual AXA   | Femenino       | 10061996      |
+  ?[36mAnd ?[0m?[36mElijo la oferta ofrecida?[0m                                                                                                                     ?[90m# co.com.cloud.inhub.auto.stepdefinitions.CotizarVehiculoStepDefinitions.elijoLaOfertaOfrecida(co.com.cloud.inhub.auto.models.DatosOfertaModel)?[0m
+    | producto | asistencia |
+    | PLUS     | VIP        |
+  ?[36mThen ?[0m?[36mValido guardado exitoso?[0m                                                                                                                     ?[90m# co.com.cloud.inhub.auto.stepdefinitions.CotizarVehiculoStepDefinitions.validoGuardadoExitoso()?[0m
+  ?[36mAnd ?[0m?[36mValido condigo entregado?[0m                                                                                                                     ?[90m# co.com.cloud.inhub.auto.stepdefinitions.CotizarVehiculoStepDefinitions.validoCondigoEntregado()?[0m
+]]></system-out>
+  <system-err><![CDATA[ERROR StatusLogger Log4j2 could not find a logging implementation. Please add log4j-core to the classpath. Using SimpleLogger to log to the console...
+Starting ChromeDriver 122.0.6261.111 (9d4c1072da62b411b351a38b9ed6214ab236aa7b-refs/branch-heads/6261@{#1015}) on port 50185
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Mar 08, 2024 3:27:58 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected upstream dialect: W3C
+Mar 08, 2024 3:27:59 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 122, so returning the closest version found: a no-op implementation
+Mar 08, 2024 3:27:59 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+INFO: Unable to find CDP implementation matching 122.
+Mar 08, 2024 3:27:59 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$3
+WARNING: Unable to find version of CDP to use for . You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.4.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+]]></system-err>
+</testsuite>

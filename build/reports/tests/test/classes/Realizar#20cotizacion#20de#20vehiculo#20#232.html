@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Class Realizar cotizacion de vehiculo #2</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Class Realizar cotizacion de vehiculo #2</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/default-package.html">default-package</a> &gt; Realizar cotizacion de vehiculo #2</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">1</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">1</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">1m50.60s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox failures" id="successRate">
+<div class="percent">0%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Failed tests</a>
+</li>
+<li>
+<a href="#tab1">Tests</a>
+</li>
+<li>
+<a href="#tab2">Standard output</a>
+</li>
+<li>
+<a href="#tab3">Standard error</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Failed tests</h2>
+<div class="test">
+<a name="Cotización persona natural existente, codigo fasecolda, con datos adicionales, con vehiculo en leasing y conductor habitual - Backoffice"></a>
+<h3 class="failures">Cotización persona natural existente, codigo fasecolda, con datos adicionales, con vehiculo en leasing y conductor habitual - Backoffice</h3>
+<span class="code">
+<pre>java.lang.AssertionError: El elemento no se mostró en el tiempo establecido  
+	at org.junit.Assert.fail(Assert.java:89)
+	at co.com.cloud.inhub.auto.utils.ExceptionsProyecto.lanzarExcepcion(ExceptionsProyecto.java:110)
+	at co.com.cloud.inhub.auto.utils.ExceptionsProyecto.validaExcepcion(ExceptionsProyecto.java:86)
+	at co.com.cloud.inhub.auto.utils.AccionesWeb.excepcionAccionesWeb(AccionesWeb.java:1133)
+	at co.com.cloud.inhub.auto.utils.AccionesWeb.clickBoton(AccionesWeb.java:181)
+	at co.com.cloud.inhub.auto.steps.StepsDatosBasicos.diligenciarDatosBasicosDatosInspeccion(StepsDatosBasicos.java:23)
+	at co.com.cloud.inhub.auto.steps.StepsDatosBasicos$ByteBuddy$fyx1COfI.diligenciarDatosBasicosDatosInspeccion$accessor$cTjTbAkg(Unknown Source)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at net.thucydides.core.steps.BaseMethodRunner.invokeMethod(BaseMethodRunner.java:18)
+	at net.thucydides.core.steps.NormalMethodRunner.invokeMethodAndNotifyFailures(NormalMethodRunner.java:18)
+	at net.thucydides.core.steps.StepInterceptor.runNormalMethod(StepInterceptor.java:406)
+	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:191)
+	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:84)
+	at net.thucydides.core.steps.ProxyConfiguration$InterceptorDispatcher.intercept(ProxyConfiguration.java:51)
+	at co.com.cloud.inhub.auto.steps.StepsDatosBasicos$ByteBuddy$fyx1COfI.diligenciarDatosBasicosDatosInspeccion(Unknown Source)
+	at co.com.cloud.inhub.auto.stepdefinitions.CotizarVehiculoStepDefinitions.diligencioLosCamposNecesariosEnElFormularioDatosBasicos(CotizarVehiculoStepDefinitions.java:49)
+	at ✽.Diligencio los campos necesarios en el formulario Datos Basicos(file:///C:/Users/jvalenciad/Documents/IntelliJ/FDP/src/test/resources/features/cotizar_vehiculo.feature:11)
+</pre>
+</span>
+</div>
+</div>
+<div id="tab1" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="failures">Cotización persona natural existente, codigo fasecolda, con datos adicionales, con vehiculo en leasing y conductor habitual - Backoffice</td>
+<td class="failures">1m50.60s</td>
+<td class="failures">failed</td>
+</tr>
+</table>
+</div>
+<div id="tab2" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>
+@CP001 @regresion.backoffice @regresion
+Scenario: CotizaciÃ³n persona natural existente, codigo fasecolda, con datos adicionales, con vehiculo en leasing y conductor habitual - Backoffice ?[90m# src/test/resources/features/cotizar_vehiculo.feature:7?[0m
+  ?[32mGiven ?[0m?[32mDeseo realizar cotizacion de un vehiculo?[0m                                                                                                   ?[90m# co.com.cloud.inhub.auto.stepdefinitions.CotizarVehiculoStepDefinitions.deseoRealizarCotizacionDeUnVehiculo()?[0m
+  ?[32mWhen ?[0m?[32mElijo la opcion Cotizar Automotores?[0m                                                                                                         ?[90m# co.com.cloud.inhub.auto.stepdefinitions.CotizarVehiculoStepDefinitions.elijoLaOpcionCotizarAutomotores()?[0m
+  ?[32mAnd ?[0m?[32mConsulto y elijo el asesor que cotizara ?[0m?[32m?[1m&quot;&quot;?[0m?[32m con tipo ?[0m?[32m?[1m&quot;BackOffice&quot;?[0m                                                                             ?[90m# co.com.cloud.inhub.auto.stepdefinitions.CotizarVehiculoStepDefinitions.consultoYElijoElAsesorQueCotizaraConTipo(java.lang.String,java.lang.String)?[0m
+  ?[31mAnd ?[0m?[31mDiligencio los campos necesarios en el formulario Datos Basicos?[0m                                                                              ?[90m# co.com.cloud.inhub.auto.stepdefinitions.CotizarVehiculoStepDefinitions.diligencioLosCamposNecesariosEnElFormularioDatosBasicos(co.com.cloud.inhub.auto.models.DatosBasicosModel)?[0m
+    | tipoId               | id      | genero   | fecha    | optPlaca | optFasecolda | fasecolda | servicio   | zona   | placa   | valorAsegurado | marca | linea            | clase     | modelo |
+    | Cedula De Ciudadania | [empty] | Femenino | 10061996 | No       | Si           | [empty]   | Particular | Bogota | [empty] | 50000000       | MAZDA | 121 LX MT 1300CC | Automovil | 2024   |
+      ?[31mjava.lang.AssertionError: El elemento no se mostrÃ³ en el tiempo establecido  
+	at org.junit.Assert.fail(Assert.java:89)
+	at co.com.cloud.inhub.auto.utils.ExceptionsProyecto.lanzarExcepcion(ExceptionsProyecto.java:110)
+	at co.com.cloud.inhub.auto.utils.ExceptionsProyecto.validaExcepcion(ExceptionsProyecto.java:86)
+	at co.com.cloud.inhub.auto.utils.AccionesWeb.excepcionAccionesWeb(AccionesWeb.java:1133)
+	at co.com.cloud.inhub.auto.utils.AccionesWeb.clickBoton(AccionesWeb.java:181)
+	at co.com.cloud.inhub.auto.steps.StepsDatosBasicos.diligenciarDatosBasicosDatosInspeccion(StepsDatosBasicos.java:23)
+	at co.com.cloud.inhub.auto.steps.StepsDatosBasicos$ByteBuddy$fyx1COfI.diligenciarDatosBasicosDatosInspeccion$accessor$cTjTbAkg(Unknown Source)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at net.thucydides.core.steps.BaseMethodRunner.invokeMethod(BaseMethodRunner.java:18)
+	at net.thucydides.core.steps.NormalMethodRunner.invokeMethodAndNotifyFailures(NormalMethodRunner.java:18)
+	at net.thucydides.core.steps.StepInterceptor.runNormalMethod(StepInterceptor.java:406)
+	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:191)
+	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:84)
+	at net.thucydides.core.steps.ProxyConfiguration$InterceptorDispatcher.intercept(ProxyConfiguration.java:51)
+	at co.com.cloud.inhub.auto.steps.StepsDatosBasicos$ByteBuddy$fyx1COfI.diligenciarDatosBasicosDatosInspeccion(Unknown Source)
+	at co.com.cloud.inhub.auto.stepdefinitions.CotizarVehiculoStepDefinitions.diligencioLosCamposNecesariosEnElFormularioDatosBasicos(CotizarVehiculoStepDefinitions.java:49)
+	at âœ½.Diligencio los campos necesarios en el formulario Datos Basicos(file:///C:/Users/jvalenciad/Documents/IntelliJ/FDP/src/test/resources/features/cotizar_vehiculo.feature:11)
+?[0m
+  ?[36mAnd ?[0m?[36mDiligencio los campos necesarios en el formulario Datos Adicionales?[0m                                                                          ?[90m# co.com.cloud.inhub.auto.stepdefinitions.CotizarVehiculoStepDefinitions.diligencioLosCamposNecesariosEnElFormularioDatosAdicionales(co.com.cloud.inhub.auto.models.DatosAdicionalesModel)?[0m
+    | optAccesorios | valorAccesorios | optBlindaje | valorBlindaje | optLocatario | tipoIdLocatario      | idLocatario | nombreLocatario | generoLocatario | fechaLocatario | optHabitual | tipoIdHabitual       | idHabitual | nombreHabitual | generoHabitual | fechaHabitual |
+    | Si            | [empty]         | Si          | [empty]       | Si           | Cedula De Ciudadania | 125898713   | Cliente AXA     | Femenino        | 10061996       | Si          | Cedula De Ciudadania | 89563247   | Habitual AXA   | Femenino       | 10061996      |
+  ?[36mAnd ?[0m?[36mElijo la oferta ofrecida?[0m                                                                                                                     ?[90m# co.com.cloud.inhub.auto.stepdefinitions.CotizarVehiculoStepDefinitions.elijoLaOfertaOfrecida(co.com.cloud.inhub.auto.models.DatosOfertaModel)?[0m
+    | producto | asistencia |
+    | PLUS     | VIP        |
+  ?[36mThen ?[0m?[36mValido guardado exitoso?[0m                                                                                                                     ?[90m# co.com.cloud.inhub.auto.stepdefinitions.CotizarVehiculoStepDefinitions.validoGuardadoExitoso()?[0m
+  ?[36mAnd ?[0m?[36mValido condigo entregado?[0m                                                                                                                     ?[90m# co.com.cloud.inhub.auto.stepdefinitions.CotizarVehiculoStepDefinitions.validoCondigoEntregado()?[0m
+</pre>
+</span>
+</div>
+<div id="tab3" class="tab">
+<h2>Standard error</h2>
+<span class="code">
+<pre>ERROR StatusLogger Log4j2 could not find a logging implementation. Please add log4j-core to the classpath. Using SimpleLogger to log to the console...
+Starting ChromeDriver 122.0.6261.111 (9d4c1072da62b411b351a38b9ed6214ab236aa7b-refs/branch-heads/6261@{#1015}) on port 50185
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Mar 08, 2024 3:27:58 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected upstream dialect: W3C
+Mar 08, 2024 3:27:59 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 122, so returning the closest version found: a no-op implementation
+Mar 08, 2024 3:27:59 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+INFO: Unable to find CDP implementation matching 122.
+Mar 08, 2024 3:27:59 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$3
+WARNING: Unable to find version of CDP to use for . You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.4.0` where the version (&quot;v86&quot;) matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 8.2</a> at Mar 8, 2024, 3:29:49 PM</p>
+</div>
+</div>
+</body>
+</html>
