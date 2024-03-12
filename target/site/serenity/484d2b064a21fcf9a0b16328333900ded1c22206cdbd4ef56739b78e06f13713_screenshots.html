@@ -1,0 +1,364 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="bootstrap-icons/font/bootstrap-icons.css"><!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.11.3/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.11.3/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.11.3/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/>
+<!--CHART.JS-->
+<script src="chartjs/chart.js"></script>
+<script src="chartjs/chartjs-plugin-datalabels@2.0.0"></script>
+<script src="chartjs/patternomaly.min.js"></script>
+<script>
+    // Register the plugin to all charts:
+    Chart.register(ChartDataLabels);
+</script>
+<!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">Templay POM</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="d44bb6f5f9f10d1ce80c99bbacb7f71a64681264090dca06d44a3096ae07a78d.html">Realizar Cotizacion De Vehiculo Con Usuario Aliado</a></span>
+                > <span class="truncate-60"><a
+                    href="484d2b064a21fcf9a0b16328333900ded1c22206cdbd4ef56739b78e06f13713.html">Cotizaci&oacute;n persona jur&iacute;dica inexistente, c&oacute;digo fasecolda, con datos adicionales y veh&iacute;culo en leasing y conductor habitual - Aliado </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="bi bi-journal-check"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="bi bi-journal-text"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 06-03-2024 12:00</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fs-2 bi bi-chat-left-quote large-icon"></i>
+                                    <span class="story-header-title">Realizar Cotizacion De Vehiculo Con Usuario Aliado </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="79787809224717934fb0e017ad16d94f739ed2e609bb38e1b87d724384d0d0e2.html">CP004
+                                    (tag)</a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="b7b5f754957d95fe2c14a7477f9f480fd47bed25ffa30c0fc26a56a4b3ad3e21.html">Regresion.aliado
+                                    (tag)</a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="773a571d092c5846a3019576b732f5fa2a9b129891c011c10cda8839a7f193e0.html">Regresion
+                                    (tag)</a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Cotizaci&oacute;n persona jur&iacute;dica inexistente, c&oacute;digo fasecolda, con datos adicionales y veh&iacute;culo en leasing y conductor habitual - Aliado
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="8e1ef2def2fec83c99f55de9ee506c007c891c2b66e7c6824ab37e5ecadcc98e.png" title=" Given Consulto e ingreso a URL del asesor
+| claveAgente | stage | tipoBienCotizar |
+| 59145 | uat | autoLiviano |" width="1920"/>
+                <img src="8e1ef2def2fec83c99f55de9ee506c007c891c2b66e7c6824ab37e5ecadcc98e.png" title=" And Consulto y elijo el asesor que cotizara &quot;&quot; con tipo &quot;Aliado&quot;" width="1920"/>
+                <img src="22399dc4a48acea68bd4ad46616efce83daf8dd2ecb7bbaf05d30feff5f0819d.png" title=" When Diligencio los campos necesarios en el formulario Datos Basicos
+| tipoId | id | genero | fecha | optPlaca | optFasecolda | fasecolda | servicio | zona | placa | valorAsegurado | marca | linea | clase | modelo |
+| Nro De Nit | 89653217 | Femenino | 10061996 | No | Si |  | Particular | Bogota |  | 50000000 | MAZDA | 121 LX MT 1300CC | Automovil | 2024 |" width="1920"/>
+                <img src="3252a3e707559c1008fa83befdd1df7ca76daabead1f672bd99d90b0e8cb1c4a.png" title=" When Diligencio los campos necesarios en el formulario Datos Basicos
+| tipoId | id | genero | fecha | optPlaca | optFasecolda | fasecolda | servicio | zona | placa | valorAsegurado | marca | linea | clase | modelo |
+| Nro De Nit | 89653217 | Femenino | 10061996 | No | Si |  | Particular | Bogota |  | 50000000 | MAZDA | 121 LX MT 1300CC | Automovil | 2024 |" width="1920"/>
+                <img src="ad406e2f8dbe313648ae90f3a97fe63b3d53c71e988b410f06c04e56d8b1a6d7.png" title=" When Diligencio los campos necesarios en el formulario Datos Basicos
+| tipoId | id | genero | fecha | optPlaca | optFasecolda | fasecolda | servicio | zona | placa | valorAsegurado | marca | linea | clase | modelo |
+| Nro De Nit | 89653217 | Femenino | 10061996 | No | Si |  | Particular | Bogota |  | 50000000 | MAZDA | 121 LX MT 1300CC | Automovil | 2024 |" width="1920"/>
+                <img src="4c79352ea9be2caa13e833147e64c010dc6ad74b7a0f4d3f8b70775d1c41215b.png" title=" When Diligencio los campos necesarios en el formulario Datos Basicos
+| tipoId | id | genero | fecha | optPlaca | optFasecolda | fasecolda | servicio | zona | placa | valorAsegurado | marca | linea | clase | modelo |
+| Nro De Nit | 89653217 | Femenino | 10061996 | No | Si |  | Particular | Bogota |  | 50000000 | MAZDA | 121 LX MT 1300CC | Automovil | 2024 |" width="1920"/>
+                <img src="1f84d35e423cecd63967279ec0f85736fbe29f02b73fb3bc9ccd63b7647bf14c.png" title=" When Diligencio los campos necesarios en el formulario Datos Basicos
+| tipoId | id | genero | fecha | optPlaca | optFasecolda | fasecolda | servicio | zona | placa | valorAsegurado | marca | linea | clase | modelo |
+| Nro De Nit | 89653217 | Femenino | 10061996 | No | Si |  | Particular | Bogota |  | 50000000 | MAZDA | 121 LX MT 1300CC | Automovil | 2024 |" width="1920"/>
+                <img src="e2fb5bb9f1628e07efe225afe77010ad9fd048a99166f314b7c471a9b3b6c949.png" title=" When Diligencio los campos necesarios en el formulario Datos Basicos
+| tipoId | id | genero | fecha | optPlaca | optFasecolda | fasecolda | servicio | zona | placa | valorAsegurado | marca | linea | clase | modelo |
+| Nro De Nit | 89653217 | Femenino | 10061996 | No | Si |  | Particular | Bogota |  | 50000000 | MAZDA | 121 LX MT 1300CC | Automovil | 2024 |" width="1920"/>
+                <img src="aef7119bf9893ab0145732bfa5593f4c6980a6fe3b3bebb7e6120afb71f6d825.png" title=" When Diligencio los campos necesarios en el formulario Datos Basicos
+| tipoId | id | genero | fecha | optPlaca | optFasecolda | fasecolda | servicio | zona | placa | valorAsegurado | marca | linea | clase | modelo |
+| Nro De Nit | 89653217 | Femenino | 10061996 | No | Si |  | Particular | Bogota |  | 50000000 | MAZDA | 121 LX MT 1300CC | Automovil | 2024 |" width="1920"/>
+                <img src="8d2734c9fa37a0aec36ceea7820e18c8b8a678f33eaf31a16b59190f9bc5161d.png" title=" When Diligencio los campos necesarios en el formulario Datos Basicos
+| tipoId | id | genero | fecha | optPlaca | optFasecolda | fasecolda | servicio | zona | placa | valorAsegurado | marca | linea | clase | modelo |
+| Nro De Nit | 89653217 | Femenino | 10061996 | No | Si |  | Particular | Bogota |  | 50000000 | MAZDA | 121 LX MT 1300CC | Automovil | 2024 |" width="1920"/>
+                <img src="487ea00cfc81598382325c4c2633664b5715414af38878cc80daa2e13c1d20ad.png" title=" When Diligencio los campos necesarios en el formulario Datos Basicos
+| tipoId | id | genero | fecha | optPlaca | optFasecolda | fasecolda | servicio | zona | placa | valorAsegurado | marca | linea | clase | modelo |
+| Nro De Nit | 89653217 | Femenino | 10061996 | No | Si |  | Particular | Bogota |  | 50000000 | MAZDA | 121 LX MT 1300CC | Automovil | 2024 |" width="1920"/>
+                <img src="55913541ce90447f9bca78661cdc435002b64e46151365da3c22e0c686fb58f9.png" title=" When Diligencio los campos necesarios en el formulario Datos Basicos
+| tipoId | id | genero | fecha | optPlaca | optFasecolda | fasecolda | servicio | zona | placa | valorAsegurado | marca | linea | clase | modelo |
+| Nro De Nit | 89653217 | Femenino | 10061996 | No | Si |  | Particular | Bogota |  | 50000000 | MAZDA | 121 LX MT 1300CC | Automovil | 2024 |" width="1920"/>
+                <img src="573156957fd8a755eae90e48430b753bba51b43c95e0a82bf20cdc34143fa3af.png" title=" When Diligencio los campos necesarios en el formulario Datos Basicos
+| tipoId | id | genero | fecha | optPlaca | optFasecolda | fasecolda | servicio | zona | placa | valorAsegurado | marca | linea | clase | modelo |
+| Nro De Nit | 89653217 | Femenino | 10061996 | No | Si |  | Particular | Bogota |  | 50000000 | MAZDA | 121 LX MT 1300CC | Automovil | 2024 |" width="1920"/>
+                <img src="847ec90c9172db38059449653a3aed2003a40bd07d10f9851c2ff4fdf26e7461.png" title=" When Diligencio los campos necesarios en el formulario Datos Basicos
+| tipoId | id | genero | fecha | optPlaca | optFasecolda | fasecolda | servicio | zona | placa | valorAsegurado | marca | linea | clase | modelo |
+| Nro De Nit | 89653217 | Femenino | 10061996 | No | Si |  | Particular | Bogota |  | 50000000 | MAZDA | 121 LX MT 1300CC | Automovil | 2024 |" width="1920"/>
+                <img src="ccaef0dbba18a031dedf835b12d910f326eda3a8bdf36407c3bb5533d3751823.png" title=" When Diligencio los campos necesarios en el formulario Datos Basicos
+| tipoId | id | genero | fecha | optPlaca | optFasecolda | fasecolda | servicio | zona | placa | valorAsegurado | marca | linea | clase | modelo |
+| Nro De Nit | 89653217 | Femenino | 10061996 | No | Si |  | Particular | Bogota |  | 50000000 | MAZDA | 121 LX MT 1300CC | Automovil | 2024 |" width="1920"/>
+                <img src="a8c0c642e2471aa6574de73de1f5413f9d724f3b0fdf300c30558e6ac1285c97.png" title=" When Diligencio los campos necesarios en el formulario Datos Basicos
+| tipoId | id | genero | fecha | optPlaca | optFasecolda | fasecolda | servicio | zona | placa | valorAsegurado | marca | linea | clase | modelo |
+| Nro De Nit | 89653217 | Femenino | 10061996 | No | Si |  | Particular | Bogota |  | 50000000 | MAZDA | 121 LX MT 1300CC | Automovil | 2024 |" width="1920"/>
+                <img src="2e8bc3e6dfcd7be01717e989b3912f20a9b50441dc0449a03d5d2df79c092d49.png" title=" When Diligencio los campos necesarios en el formulario Datos Basicos
+| tipoId | id | genero | fecha | optPlaca | optFasecolda | fasecolda | servicio | zona | placa | valorAsegurado | marca | linea | clase | modelo |
+| Nro De Nit | 89653217 | Femenino | 10061996 | No | Si |  | Particular | Bogota |  | 50000000 | MAZDA | 121 LX MT 1300CC | Automovil | 2024 | (completed)" width="1920"/>
+                <img src="142ced3e5c1cf507fafc2e63e798f25ea4c77a31ac38531c61e50e59ae78c97c.png" title=" And Diligencio los campos necesarios en el formulario Datos Adicionales
+| optAccesorios | valorAccesorios | optBlindaje | valorBlindaje | optLocatario | tipoIdLocatario | idLocatario | nombreLocatario | generoLocatario | fechaLocatario | optHabitual | tipoIdHabitual | idHabitual | nombreHabitual | generoHabitual | fechaHabitual |
+| Si |  | Si |  | Si | Cedula De Ciudadania | 125898713 | Cliente AXA | Femenino | 10061996 | Si | Cedula De Ciudadania | 89563247 | Habitual AXA | Femenino | 10061996 |" width="1920"/>
+                <img src="d5f73e6c83939c4a91a81ebc4a564ccf0441562dd2b4cb90d2398a4f01c4e0e4.png" title=" And Diligencio los campos necesarios en el formulario Datos Adicionales
+| optAccesorios | valorAccesorios | optBlindaje | valorBlindaje | optLocatario | tipoIdLocatario | idLocatario | nombreLocatario | generoLocatario | fechaLocatario | optHabitual | tipoIdHabitual | idHabitual | nombreHabitual | generoHabitual | fechaHabitual |
+| Si |  | Si |  | Si | Cedula De Ciudadania | 125898713 | Cliente AXA | Femenino | 10061996 | Si | Cedula De Ciudadania | 89563247 | Habitual AXA | Femenino | 10061996 |" width="1920"/>
+                <img src="6a72d80b682e9a33ef3ac5d7334fe0865a69aa7ae8d055239741388a794253e2.png" title=" And Diligencio los campos necesarios en el formulario Datos Adicionales
+| optAccesorios | valorAccesorios | optBlindaje | valorBlindaje | optLocatario | tipoIdLocatario | idLocatario | nombreLocatario | generoLocatario | fechaLocatario | optHabitual | tipoIdHabitual | idHabitual | nombreHabitual | generoHabitual | fechaHabitual |
+| Si |  | Si |  | Si | Cedula De Ciudadania | 125898713 | Cliente AXA | Femenino | 10061996 | Si | Cedula De Ciudadania | 89563247 | Habitual AXA | Femenino | 10061996 |" width="1920"/>
+                <img src="de2eb4ac5903ae31ff655d03fb1182c747bdfb58330582ce2f4e19dbf330791f.png" title=" And Diligencio los campos necesarios en el formulario Datos Adicionales
+| optAccesorios | valorAccesorios | optBlindaje | valorBlindaje | optLocatario | tipoIdLocatario | idLocatario | nombreLocatario | generoLocatario | fechaLocatario | optHabitual | tipoIdHabitual | idHabitual | nombreHabitual | generoHabitual | fechaHabitual |
+| Si |  | Si |  | Si | Cedula De Ciudadania | 125898713 | Cliente AXA | Femenino | 10061996 | Si | Cedula De Ciudadania | 89563247 | Habitual AXA | Femenino | 10061996 |" width="1920"/>
+                <img src="30b57b9e0f050e8968763eb61bdc0ec715fe45653448c587b388132568aad71a.png" title=" And Diligencio los campos necesarios en el formulario Datos Adicionales
+| optAccesorios | valorAccesorios | optBlindaje | valorBlindaje | optLocatario | tipoIdLocatario | idLocatario | nombreLocatario | generoLocatario | fechaLocatario | optHabitual | tipoIdHabitual | idHabitual | nombreHabitual | generoHabitual | fechaHabitual |
+| Si |  | Si |  | Si | Cedula De Ciudadania | 125898713 | Cliente AXA | Femenino | 10061996 | Si | Cedula De Ciudadania | 89563247 | Habitual AXA | Femenino | 10061996 |" width="1920"/>
+                <img src="ca31f096d3d0057845e0c4b37b7099ac2084a4965991ba362c22a4b925a6a1f1.png" title=" And Diligencio los campos necesarios en el formulario Datos Adicionales
+| optAccesorios | valorAccesorios | optBlindaje | valorBlindaje | optLocatario | tipoIdLocatario | idLocatario | nombreLocatario | generoLocatario | fechaLocatario | optHabitual | tipoIdHabitual | idHabitual | nombreHabitual | generoHabitual | fechaHabitual |
+| Si |  | Si |  | Si | Cedula De Ciudadania | 125898713 | Cliente AXA | Femenino | 10061996 | Si | Cedula De Ciudadania | 89563247 | Habitual AXA | Femenino | 10061996 |" width="1920"/>
+                <img src="455b6cbd611f7dd4ecfb66089df5b39ebfcfa6dcd6e0dc595a2df77331f954d7.png" title=" And Diligencio los campos necesarios en el formulario Datos Adicionales
+| optAccesorios | valorAccesorios | optBlindaje | valorBlindaje | optLocatario | tipoIdLocatario | idLocatario | nombreLocatario | generoLocatario | fechaLocatario | optHabitual | tipoIdHabitual | idHabitual | nombreHabitual | generoHabitual | fechaHabitual |
+| Si |  | Si |  | Si | Cedula De Ciudadania | 125898713 | Cliente AXA | Femenino | 10061996 | Si | Cedula De Ciudadania | 89563247 | Habitual AXA | Femenino | 10061996 |" width="1920"/>
+                <img src="92184b26199e1afa20bcfaee74db72fff528cfa2399fa346fe1045791e57a46a.png" title=" And Diligencio los campos necesarios en el formulario Datos Adicionales
+| optAccesorios | valorAccesorios | optBlindaje | valorBlindaje | optLocatario | tipoIdLocatario | idLocatario | nombreLocatario | generoLocatario | fechaLocatario | optHabitual | tipoIdHabitual | idHabitual | nombreHabitual | generoHabitual | fechaHabitual |
+| Si |  | Si |  | Si | Cedula De Ciudadania | 125898713 | Cliente AXA | Femenino | 10061996 | Si | Cedula De Ciudadania | 89563247 | Habitual AXA | Femenino | 10061996 |" width="1920"/>
+                <img src="95b25a98e9464e6f1e1e53a13db42d67c054626b64cbf823bd44c5ad0821bd9a.png" title=" And Diligencio los campos necesarios en el formulario Datos Adicionales
+| optAccesorios | valorAccesorios | optBlindaje | valorBlindaje | optLocatario | tipoIdLocatario | idLocatario | nombreLocatario | generoLocatario | fechaLocatario | optHabitual | tipoIdHabitual | idHabitual | nombreHabitual | generoHabitual | fechaHabitual |
+| Si |  | Si |  | Si | Cedula De Ciudadania | 125898713 | Cliente AXA | Femenino | 10061996 | Si | Cedula De Ciudadania | 89563247 | Habitual AXA | Femenino | 10061996 |" width="1920"/>
+                <img src="29ae2301b81dde0060c63e3dd8208586f98eccdaf2569eca927689d5e6a8d047.png" title=" And Diligencio los campos necesarios en el formulario Datos Adicionales
+| optAccesorios | valorAccesorios | optBlindaje | valorBlindaje | optLocatario | tipoIdLocatario | idLocatario | nombreLocatario | generoLocatario | fechaLocatario | optHabitual | tipoIdHabitual | idHabitual | nombreHabitual | generoHabitual | fechaHabitual |
+| Si |  | Si |  | Si | Cedula De Ciudadania | 125898713 | Cliente AXA | Femenino | 10061996 | Si | Cedula De Ciudadania | 89563247 | Habitual AXA | Femenino | 10061996 |" width="1920"/>
+                <img src="823128b6ee4c3503ecb7c39576308c053abbfaaf129e3fff66e3a14878de8fec.png" title=" And Diligencio los campos necesarios en el formulario Datos Adicionales
+| optAccesorios | valorAccesorios | optBlindaje | valorBlindaje | optLocatario | tipoIdLocatario | idLocatario | nombreLocatario | generoLocatario | fechaLocatario | optHabitual | tipoIdHabitual | idHabitual | nombreHabitual | generoHabitual | fechaHabitual |
+| Si |  | Si |  | Si | Cedula De Ciudadania | 125898713 | Cliente AXA | Femenino | 10061996 | Si | Cedula De Ciudadania | 89563247 | Habitual AXA | Femenino | 10061996 |" width="1920"/>
+                <img src="ab34944de14b34cba14ae6bfe8bfe51558584bbd3ae01ea035418c4008ad97c4.png" title=" And Diligencio los campos necesarios en el formulario Datos Adicionales
+| optAccesorios | valorAccesorios | optBlindaje | valorBlindaje | optLocatario | tipoIdLocatario | idLocatario | nombreLocatario | generoLocatario | fechaLocatario | optHabitual | tipoIdHabitual | idHabitual | nombreHabitual | generoHabitual | fechaHabitual |
+| Si |  | Si |  | Si | Cedula De Ciudadania | 125898713 | Cliente AXA | Femenino | 10061996 | Si | Cedula De Ciudadania | 89563247 | Habitual AXA | Femenino | 10061996 |" width="1920"/>
+                <img src="bad4a4da1374726a7929e66938607778addfa3243771f95c9ce9702561c03270.png" title=" And Diligencio los campos necesarios en el formulario Datos Adicionales
+| optAccesorios | valorAccesorios | optBlindaje | valorBlindaje | optLocatario | tipoIdLocatario | idLocatario | nombreLocatario | generoLocatario | fechaLocatario | optHabitual | tipoIdHabitual | idHabitual | nombreHabitual | generoHabitual | fechaHabitual |
+| Si |  | Si |  | Si | Cedula De Ciudadania | 125898713 | Cliente AXA | Femenino | 10061996 | Si | Cedula De Ciudadania | 89563247 | Habitual AXA | Femenino | 10061996 |" width="1920"/>
+                <img src="4dc698abd794f048cf51e427b5accf06a93c2d2280bc245dc0ed39338c7ac8e6.png" title=" And Diligencio los campos necesarios en el formulario Datos Adicionales
+| optAccesorios | valorAccesorios | optBlindaje | valorBlindaje | optLocatario | tipoIdLocatario | idLocatario | nombreLocatario | generoLocatario | fechaLocatario | optHabitual | tipoIdHabitual | idHabitual | nombreHabitual | generoHabitual | fechaHabitual |
+| Si |  | Si |  | Si | Cedula De Ciudadania | 125898713 | Cliente AXA | Femenino | 10061996 | Si | Cedula De Ciudadania | 89563247 | Habitual AXA | Femenino | 10061996 |" width="1920"/>
+                <img src="f62e5c5417584f88fae07efe98f201cb10705209fa6147a06fdcd61b451953e1.png" title=" And Diligencio los campos necesarios en el formulario Datos Adicionales
+| optAccesorios | valorAccesorios | optBlindaje | valorBlindaje | optLocatario | tipoIdLocatario | idLocatario | nombreLocatario | generoLocatario | fechaLocatario | optHabitual | tipoIdHabitual | idHabitual | nombreHabitual | generoHabitual | fechaHabitual |
+| Si |  | Si |  | Si | Cedula De Ciudadania | 125898713 | Cliente AXA | Femenino | 10061996 | Si | Cedula De Ciudadania | 89563247 | Habitual AXA | Femenino | 10061996 |" width="1920"/>
+                <img src="d79141f84a467041508e5c38070f7731b0d077bb0269c6588aaf4769cddfc42b.png" title=" And Diligencio los campos necesarios en el formulario Datos Adicionales
+| optAccesorios | valorAccesorios | optBlindaje | valorBlindaje | optLocatario | tipoIdLocatario | idLocatario | nombreLocatario | generoLocatario | fechaLocatario | optHabitual | tipoIdHabitual | idHabitual | nombreHabitual | generoHabitual | fechaHabitual |
+| Si |  | Si |  | Si | Cedula De Ciudadania | 125898713 | Cliente AXA | Femenino | 10061996 | Si | Cedula De Ciudadania | 89563247 | Habitual AXA | Femenino | 10061996 |" width="1920"/>
+                <img src="2bd145efe9a739f8d75c5c3979fc59c157d706e11a56bdcf5dd86cc6dabd3f0f.png" title=" And Diligencio los campos necesarios en el formulario Datos Adicionales
+| optAccesorios | valorAccesorios | optBlindaje | valorBlindaje | optLocatario | tipoIdLocatario | idLocatario | nombreLocatario | generoLocatario | fechaLocatario | optHabitual | tipoIdHabitual | idHabitual | nombreHabitual | generoHabitual | fechaHabitual |
+| Si |  | Si |  | Si | Cedula De Ciudadania | 125898713 | Cliente AXA | Femenino | 10061996 | Si | Cedula De Ciudadania | 89563247 | Habitual AXA | Femenino | 10061996 |" width="1920"/>
+                <img src="5b8d41da31a038f0839e09ade4ff63ecfa7afe263ec3cee683a040967c1da6f7.png" title=" And Diligencio los campos necesarios en el formulario Datos Adicionales
+| optAccesorios | valorAccesorios | optBlindaje | valorBlindaje | optLocatario | tipoIdLocatario | idLocatario | nombreLocatario | generoLocatario | fechaLocatario | optHabitual | tipoIdHabitual | idHabitual | nombreHabitual | generoHabitual | fechaHabitual |
+| Si |  | Si |  | Si | Cedula De Ciudadania | 125898713 | Cliente AXA | Femenino | 10061996 | Si | Cedula De Ciudadania | 89563247 | Habitual AXA | Femenino | 10061996 |" width="1920"/>
+                <img src="0850f127980d45cfeba2c1b92fff5746f6b911bd85eba3f91403daeb1b062033.png" title=" And Diligencio los campos necesarios en el formulario Datos Adicionales
+| optAccesorios | valorAccesorios | optBlindaje | valorBlindaje | optLocatario | tipoIdLocatario | idLocatario | nombreLocatario | generoLocatario | fechaLocatario | optHabitual | tipoIdHabitual | idHabitual | nombreHabitual | generoHabitual | fechaHabitual |
+| Si |  | Si |  | Si | Cedula De Ciudadania | 125898713 | Cliente AXA | Femenino | 10061996 | Si | Cedula De Ciudadania | 89563247 | Habitual AXA | Femenino | 10061996 |" width="1920"/>
+                <img src="0e00b9410ea17a6d484d61b589a03a93b1131f9acfbcdbc7a3f2987f4c394cfd.png" title=" And Diligencio los campos necesarios en el formulario Datos Adicionales
+| optAccesorios | valorAccesorios | optBlindaje | valorBlindaje | optLocatario | tipoIdLocatario | idLocatario | nombreLocatario | generoLocatario | fechaLocatario | optHabitual | tipoIdHabitual | idHabitual | nombreHabitual | generoHabitual | fechaHabitual |
+| Si |  | Si |  | Si | Cedula De Ciudadania | 125898713 | Cliente AXA | Femenino | 10061996 | Si | Cedula De Ciudadania | 89563247 | Habitual AXA | Femenino | 10061996 |" width="1920"/>
+                <img src="a7851edc270dc3b041e6db58cfe6506d067ff29225eee2a661f47f75295730c6.png" title=" And Diligencio los campos necesarios en el formulario Datos Adicionales
+| optAccesorios | valorAccesorios | optBlindaje | valorBlindaje | optLocatario | tipoIdLocatario | idLocatario | nombreLocatario | generoLocatario | fechaLocatario | optHabitual | tipoIdHabitual | idHabitual | nombreHabitual | generoHabitual | fechaHabitual |
+| Si |  | Si |  | Si | Cedula De Ciudadania | 125898713 | Cliente AXA | Femenino | 10061996 | Si | Cedula De Ciudadania | 89563247 | Habitual AXA | Femenino | 10061996 | (completed)" width="1920"/>
+                <img src="dd3eb19cbe3851afdd465349099343b01df68ec77c84054061588f6bf4e70a63.png" title=" And Elijo la oferta ofrecida
+| producto | asistencia |
+| PLUS | VIP |" width="1920"/>
+                <img src="6e761ee6f6a8b6f02196c14ef3ea48488639809f33c07efabbd53a1d305b8bfb.png" title=" And Elijo la oferta ofrecida
+| producto | asistencia |
+| PLUS | VIP |" width="1920"/>
+                <img src="0a695f55ded8e130b092f61312b4d7f049f10f1ec37e2b8a5ec952012027eca0.png" title=" And Elijo la oferta ofrecida
+| producto | asistencia |
+| PLUS | VIP | (completed)" width="1920"/>
+                <img src="4278398da1b3000c079d7b1fd4fee074ae9eb074fe36008a4311755423eaf3aa.png" title=" Then Valido guardado exitoso" width="1920"/>
+                <img src="f38ccbb4b7ae55336329a42a34250fee79627e084e33ddc52604676326937ff6.png" title=" Then Valido guardado exitoso" width="1920"/>
+                <img src="f75ee106011c89be199fe6895d4d8034ec7d63b983bf8f5596a6700f46ca0d54.png" title=" Then Valido guardado exitoso (completed)" width="1920"/>
+                <img src="c7ad089d725472ba8e85050ec63a15709c9b46717c329406b8d7c27ac2bad178.png" title=" And Valido condigo entregado: <span class='success-color'>SUCCESS</span>" width="1920"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 3.3.2</span>
+</div>
+</body>
+</html>

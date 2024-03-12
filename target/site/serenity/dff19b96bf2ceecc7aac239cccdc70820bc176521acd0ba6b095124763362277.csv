@@ -1,0 +1,4 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Realizar cotizacion de vehiculo","Cotización persona natural en inbroker con placa en fasecolda, con datos adicionales, con vehículo en leasing y conductor habitual - BackOffice","SUCCESS","2024-03-06T11:19:41.9315708-05:00[America/Bogota]","0.0","385.28"
+"Realizar cotizacion de vehiculo con usuario aliado","Cotización persona natural en inbroker con placa en fasecolda, con datos adicionales e inhabilitado vehículo en leasing y conductor habitual - Aliado","SUCCESS","2024-03-06T12:11:16.2749572-05:00[America/Bogota]","0.0","286.82"
+"Realizar cotizacion de vehiculo con usuario intermediario","Cotización persona natural en inbroker con placa en fasecolda, con datos adicionales e inhabilitado vehículo en leasing y conductor habitual - Intermediario","SUCCESS","2024-03-06T12:55:15.4650483-05:00[America/Bogota]","0.0","289.04"

@@ -1,0 +1,3 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Realizar cotizacion de vehiculo con usuario aliado","Cotización persona natural inexistente, código fasecolda con datos adicionales e inhabilitado vehículo en leasing y conductor habitual - Aliado","SUCCESS","2024-03-06T11:50:41.943722-05:00[America/Bogota]","0.0","296.79"
+"Realizar cotizacion de vehiculo con usuario intermediario","Cotización persona natural inexistente, código fasecolda con datos adicionales e inhabilitado vehículo en leasing y conductor habitual - Intermediario","SUCCESS","2024-03-06T12:34:26.4780129-05:00[America/Bogota]","0.0","298.58"

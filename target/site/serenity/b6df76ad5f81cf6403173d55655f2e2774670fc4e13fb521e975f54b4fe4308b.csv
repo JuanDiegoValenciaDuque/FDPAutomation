@@ -1,0 +1,3 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Realizar cotizacion de vehiculo con usuario aliado","Cotización persona natural inexistente en inbroker con marca no asegurable - Aliado","SUCCESS","2024-03-06T12:26:50.6071766-05:00[America/Bogota]","0.0","162.4"
+"Realizar cotizacion de vehiculo con usuario intermediario","Cotización persona natural inexistente en inbroker con marca no asegurable - Intermediario","SUCCESS","2024-03-07T08:07:18.2664471-05:00[America/Bogota]","0.0","185.69"

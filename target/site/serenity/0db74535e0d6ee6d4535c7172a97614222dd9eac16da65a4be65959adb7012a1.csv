@@ -1,0 +1,5 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Realizar cotizacion de vehiculo con usuario aliado","Cotización persona natural inexistente, código fasecolda con datos adicionales e inhabilitado vehículo en leasing y conductor habitual - Aliado","FAILURE","2024-03-06T08:59:43.4457085-05:00[America/Bogota]","0.0","55.29"
+"Realizar cotizacion de vehiculo con usuario aliado","Cotización persona jurídica inexistente, código fasecolda, con datos adicionales y vehículo en leasing y conductor habitual - Aliado","FAILURE","2024-03-06T09:05:12.8641785-05:00[America/Bogota]","0.0","134.97"
+"Realizar cotizacion de vehiculo con usuario aliado","Cotización persona natural existente, código fasecolda y que súpere el limite de accesorios - Aliado","FAILURE","2024-03-06T09:07:27.9823439-05:00[America/Bogota]","0.0","163.09"
+"Realizar cotizacion de vehiculo con usuario aliado","Cotización persona jurídica inexistente en inbroker con placa en fasecolda, con datos adicionales, vehículo en leasing y conductor habitual - Aliado","FAILURE","2024-03-06T09:17:46.667811-05:00[America/Bogota]","0.0","135.5"

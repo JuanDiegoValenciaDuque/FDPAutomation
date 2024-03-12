@@ -1,0 +1,4 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Realizar cotizacion de vehiculo con usuario intermediario","Cotización persona jurídica inexistente, código fasecolda, con datos adicionales y vehículo en leasing y conductor habitual - Intermediario","SUCCESS","2024-03-06T12:44:05.7270148-05:00[America/Bogota]","0.0","332.38"
+"Realizar cotizacion de vehiculo con usuario intermediario","Cotización persona jurídica inexistente en inbroker con placa en fasecolda, con datos adicionales, vehículo en leasing y conductor habitual - Intermediario","SUCCESS","2024-03-06T13:00:04.5169263-05:00[America/Bogota]","0.0","331.28"
+"Realizar cotizacion de vehiculo con usuario intermediario","Cotización persona natural en inbroker, sin placa, sin código fasecolda, con datos adicionales e inhabilitado vehículo en leasing y conductor habitual - Intermediario","SUCCESS","2024-03-06T13:05:35.813722-05:00[America/Bogota]","0.0","319.57"
