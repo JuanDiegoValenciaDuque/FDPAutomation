@@ -7,6 +7,7 @@ apply plugin: 'application'
 apply plugin: 'java-library'
 apply plugin: 'jacoco'
 apply plugin: 'maven-publish'
+apply plugin: 'org.sonarqube'
 apply plugin: "net.serenity-bdd.serenity-gradle-plugin"
 
 compileJava.options.encoding = "UTF-8"
