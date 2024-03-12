@@ -1,0 +1,35 @@
+pipeline {
+  agent { label 'JVALENCIAD' }
+
+  stages {
+
+      stage('install') {
+        steps {
+          git branch: 'master', url: 'https://github.com/JuanDiegoValenciaDuque/FDPAutomation.git'
+        }
+      }
+
+    stage('SonarQube analysis') {
+        steps {
+            withSonarQubeEnv(installationName: 'Sonar 9.8.0.63668', credentialsId: 'jenkins-sonar') {
+              bat """
+              ./gradlew sonar \
+                    -Dsonar.projectKey=${"UserJenkins"} \
+                    -Dsonar.host.url=${env.SONAR_HOST_URL} \
+                    -Dsonar.login=${env.SONAR_AUTH_TOKEN} \
+                    -Dsonar.projectName=${"co.com.choucair.certification.FDP"} \
+                    -Dsonar.projectVersion=${BUILD_NUMBER}"
+                """
+            }
+          }
+        } //scan
+
+    stage('Build') {
+      steps {
+        withGradle {
+           bat './gradlew clean build --stacktrace -i'
+        }
+      }
+    } // Build
+  }
+}
