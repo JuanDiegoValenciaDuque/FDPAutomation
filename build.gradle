@@ -1,0 +1,109 @@
+group 'ProyectoBasePOM'
+version '1.0'
+apply plugin: 'groovy'
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'application'
+apply plugin: 'java-library'
+apply plugin: 'jacoco'
+apply plugin: 'maven-publish'
+apply plugin: "net.serenity-bdd.serenity-gradle-plugin"
+
+compileJava.options.encoding = "UTF-8"
+compileTestJava.options.encoding = "UTF-8"
+
+def serenityCoreVersion='3.3.2'
+def logVersion = '1.2.10'
+def lombokVersion = '1.18.22'
+def versionApachePoi='5.2.2'
+
+repositories {
+    mavenCentral()
+    maven {
+        url 'https://pkgs.dev.azure.com/DEV-FormacionCH/f11a2ddb-f565-44a3-8710-e9e1472d29ee/_packaging/Choucair/maven/v1'
+    }
+}
+
+buildscript {
+    repositories {
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+    }
+    dependencies {
+        classpath "net.serenity-bdd:serenity-gradle-plugin:3.3.2"
+    }
+}
+buildscript {
+    repositories {
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+    }
+    dependencies {
+        classpath "org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:4.0.0.2929"
+    }
+}
+
+dependencies {
+
+    implementation ("net.serenity-bdd:serenity-core:${serenityCoreVersion}")
+    implementation "net.serenity-bdd:serenity-junit5:${serenityCoreVersion}"
+    implementation "net.serenity-bdd:serenity-cucumber:${serenityCoreVersion}"
+    implementation "net.serenity-bdd:serenity-rest-assured:${serenityCoreVersion}"
+    implementation "net.serenity-bdd:serenity-ensure:${serenityCoreVersion}"
+    implementation "net.serenity-bdd:serenity-screenplay:${serenityCoreVersion}"
+    implementation "net.serenity-bdd:serenity-screenplay-webdriver:${serenityCoreVersion}"
+    implementation "net.serenity-bdd:serenity-screenplay-rest:${serenityCoreVersion}"
+    implementation "ch.qos.logback:logback-classic:${logVersion}"
+    implementation "ch.qos.logback:logback-core:${logVersion}"
+
+    implementation 'io.github.bonigarcia:webdrivermanager:5.6.3'
+    // implementation group: 'com.github.javafaker', name: 'javafaker', version: '1.0.2'
+
+    compileOnly "org.projectlombok:lombok:${lombokVersion}"
+    annotationProcessor "org.projectlombok:lombok:${lombokVersion}"
+    testCompileOnly "org.projectlombok:lombok:${lombokVersion}"
+    testAnnotationProcessor "org.projectlombok:lombok:${lombokVersion}"
+    implementation "org.apache.poi:poi:${versionApachePoi}"
+    implementation "org.apache.poi:poi-ooxml:${versionApachePoi}"
+
+    //LIBRERIAS CHOUCAIR
+    implementation(group: 'com.choucair', name: 'libreria', version: '2.1.2.5')
+
+    // https://mvnrepository.com/artifact/com.itextpdf/itextpdf
+    implementation(group: 'com.itextpdf', name: 'itextpdf', version: '5.5.13.3')
+
+    // https://mvnrepository.com/artifact/org.json/json
+    implementation group: 'org.json', name: 'json', version: '20240303'
+}
+
+test {
+    useJUnit {
+        include "**/*";
+        gradle.startParameter.continueOnFailure = true
+        testLogging.showStandardStreams = true
+        systemProperties System.getProperties()
+        systemProperty "cucumber.filter.tags", System.getProperty("cucumber.filter.tags")
+    }
+}
+
+serenity {
+    testRoot = "co.com.templay.pom.runners"
+    requirementsBaseDir = "src/test/resources/features"
+    reports = ["single-page-html"]
+}
+
+
+
+task ejecutarPDFCreator(type: JavaExec) {
+    mainClass = 'co.com.cloud.inhub.auto.utils.GenerarEvidenciasEnPDF'
+    classpath = sourceSets.main.runtimeClasspath
+    doLast {
+        println 'Reportes Creados en PDF Exitoso.'
+    }
+}
+aggregate.finalizedBy ejecutarPDFCreator
+
+gradle.startParameter.continueOnFailure = true
+test.finalizedBy(aggregate)

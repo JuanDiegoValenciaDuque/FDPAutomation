@@ -1,0 +1,315 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="bootstrap-icons/font/bootstrap-icons.css"><!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.11.3/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.11.3/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.11.3/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/>
+<!--CHART.JS-->
+<script src="chartjs/chart.js"></script>
+<script src="chartjs/chartjs-plugin-datalabels@2.0.0"></script>
+<script src="chartjs/patternomaly.min.js"></script>
+<script>
+    // Register the plugin to all charts:
+    Chart.register(ChartDataLabels);
+</script>
+<!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">Templay POM</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="40bf05dbed2d4fa960d7618c4c25255f4bb3174dc924e006bae20b955bc681d6.html">Realizar Cotizacion De Vehiculo Con Usuario Intermediario</a></span>
+                > <span class="truncate-60"><a
+                    href="8aaa397cd943e891b19faa5419b6d3bcaafbf52a6398e953893978f221ddb177.html">Cotizaci&oacute;n persona natural inexistente en inbroker con marca no asegurable - Intermediario </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="bi bi-journal-check"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="bi bi-journal-text"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 07-03-2024 08:07</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fs-2 bi bi-chat-left-quote large-icon"></i>
+                                    <span class="story-header-title">Realizar Cotizacion De Vehiculo Con Usuario Intermediario </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="62501f680c252293a307aa136d25bea650022329f91655ab770de02f63ee7bf4.html">Regresion.intermediario
+                                    (tag)</a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="846355a170cbd380ba7476d0e37384d302f4af008c1f2ad423d2357a3bfdf749.html">CP010
+                                    (tag)</a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="773a571d092c5846a3019576b732f5fa2a9b129891c011c10cda8839a7f193e0.html">Regresion
+                                    (tag)</a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Cotizaci&oacute;n persona natural inexistente en inbroker con marca no asegurable - Intermediario
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="1262a58ed4f31e91c4cf04ad3203e049a4f9c9969430883cbc2944eee42bb0e1.png" title=" Given Consulto e ingreso a URL del asesor
+| claveAgente | stage | tipoBienCotizar |
+| 33426 | uat | autoLiviano |" width="1920"/>
+                <img src="1262a58ed4f31e91c4cf04ad3203e049a4f9c9969430883cbc2944eee42bb0e1.png" title=" And Consulto y elijo el asesor que cotizara &quot;&quot; con tipo &quot;Intermediario&quot;" width="1920"/>
+                <img src="278f02ca536f58bd7244fd926c0b272a17fc607a26c4fb6d1edecc1c21d0a37d.png" title=" When Diligencio los campos necesarios en el formulario Datos Basicos
+| tipoId | id | genero | fecha | optPlaca | optFasecolda | fasecolda | servicio | zona | placa | valorAsegurado | marca | linea | clase | modelo |
+| Cedula De Ciudadania |  | Femenino | 10061996 | No | No |  | Particular | Bogota |  | 50000000 | FERRARI | 458 ITALIA TP 4500CC V8 | Automovil | 2024 |" width="1920"/>
+                <img src="1fac728a9ce97314de29eb4a6c2f6ecb7f98d5c0d08b27a46c3650a9921d0d1a.png" title=" When Diligencio los campos necesarios en el formulario Datos Basicos
+| tipoId | id | genero | fecha | optPlaca | optFasecolda | fasecolda | servicio | zona | placa | valorAsegurado | marca | linea | clase | modelo |
+| Cedula De Ciudadania |  | Femenino | 10061996 | No | No |  | Particular | Bogota |  | 50000000 | FERRARI | 458 ITALIA TP 4500CC V8 | Automovil | 2024 |" width="1920"/>
+                <img src="fe10bacb44f96151cfb1faa05894a012aa286fd36356b41970209a205a1c6050.png" title=" When Diligencio los campos necesarios en el formulario Datos Basicos
+| tipoId | id | genero | fecha | optPlaca | optFasecolda | fasecolda | servicio | zona | placa | valorAsegurado | marca | linea | clase | modelo |
+| Cedula De Ciudadania |  | Femenino | 10061996 | No | No |  | Particular | Bogota |  | 50000000 | FERRARI | 458 ITALIA TP 4500CC V8 | Automovil | 2024 |" width="1920"/>
+                <img src="974d189f197359139439365a427ce220e44c27f16009bbd6765bcc148298a72d.png" title=" When Diligencio los campos necesarios en el formulario Datos Basicos
+| tipoId | id | genero | fecha | optPlaca | optFasecolda | fasecolda | servicio | zona | placa | valorAsegurado | marca | linea | clase | modelo |
+| Cedula De Ciudadania |  | Femenino | 10061996 | No | No |  | Particular | Bogota |  | 50000000 | FERRARI | 458 ITALIA TP 4500CC V8 | Automovil | 2024 |" width="1920"/>
+                <img src="0732e4ae6fecac5e5c016eb1236416c669125e5df542fb3b5c65374963841642.png" title=" When Diligencio los campos necesarios en el formulario Datos Basicos
+| tipoId | id | genero | fecha | optPlaca | optFasecolda | fasecolda | servicio | zona | placa | valorAsegurado | marca | linea | clase | modelo |
+| Cedula De Ciudadania |  | Femenino | 10061996 | No | No |  | Particular | Bogota |  | 50000000 | FERRARI | 458 ITALIA TP 4500CC V8 | Automovil | 2024 |" width="1920"/>
+                <img src="d48c7a636673ff7802e06198fd886b8cb7158476b1dc36f373722bcd475d70e6.png" title=" When Diligencio los campos necesarios en el formulario Datos Basicos
+| tipoId | id | genero | fecha | optPlaca | optFasecolda | fasecolda | servicio | zona | placa | valorAsegurado | marca | linea | clase | modelo |
+| Cedula De Ciudadania |  | Femenino | 10061996 | No | No |  | Particular | Bogota |  | 50000000 | FERRARI | 458 ITALIA TP 4500CC V8 | Automovil | 2024 |" width="1920"/>
+                <img src="618d441f56eb1700bb76abf3b882450915c1fcf3005b2a2f6934cd3a9085e512.png" title=" When Diligencio los campos necesarios en el formulario Datos Basicos
+| tipoId | id | genero | fecha | optPlaca | optFasecolda | fasecolda | servicio | zona | placa | valorAsegurado | marca | linea | clase | modelo |
+| Cedula De Ciudadania |  | Femenino | 10061996 | No | No |  | Particular | Bogota |  | 50000000 | FERRARI | 458 ITALIA TP 4500CC V8 | Automovil | 2024 |" width="1920"/>
+                <img src="5e3f6880ada82d0c0b492683713d781cc0cd8a0e71cf172e5714d2943d71d9c9.png" title=" When Diligencio los campos necesarios en el formulario Datos Basicos
+| tipoId | id | genero | fecha | optPlaca | optFasecolda | fasecolda | servicio | zona | placa | valorAsegurado | marca | linea | clase | modelo |
+| Cedula De Ciudadania |  | Femenino | 10061996 | No | No |  | Particular | Bogota |  | 50000000 | FERRARI | 458 ITALIA TP 4500CC V8 | Automovil | 2024 |" width="1920"/>
+                <img src="3bdf97ac6a43af1fce97f071cc24017351b5656fd2bec56dca5183d81e40a670.png" title=" When Diligencio los campos necesarios en el formulario Datos Basicos
+| tipoId | id | genero | fecha | optPlaca | optFasecolda | fasecolda | servicio | zona | placa | valorAsegurado | marca | linea | clase | modelo |
+| Cedula De Ciudadania |  | Femenino | 10061996 | No | No |  | Particular | Bogota |  | 50000000 | FERRARI | 458 ITALIA TP 4500CC V8 | Automovil | 2024 |" width="1920"/>
+                <img src="8f844c78eb8ce3b3846a58b7df3a04b52af998e2434d40216ee5511a0be4ba43.png" title=" When Diligencio los campos necesarios en el formulario Datos Basicos
+| tipoId | id | genero | fecha | optPlaca | optFasecolda | fasecolda | servicio | zona | placa | valorAsegurado | marca | linea | clase | modelo |
+| Cedula De Ciudadania |  | Femenino | 10061996 | No | No |  | Particular | Bogota |  | 50000000 | FERRARI | 458 ITALIA TP 4500CC V8 | Automovil | 2024 |" width="1920"/>
+                <img src="46e56d750e744109de749790cb5b5941381aa73a5d279a805d470081ce3d5ca0.png" title=" When Diligencio los campos necesarios en el formulario Datos Basicos
+| tipoId | id | genero | fecha | optPlaca | optFasecolda | fasecolda | servicio | zona | placa | valorAsegurado | marca | linea | clase | modelo |
+| Cedula De Ciudadania |  | Femenino | 10061996 | No | No |  | Particular | Bogota |  | 50000000 | FERRARI | 458 ITALIA TP 4500CC V8 | Automovil | 2024 |" width="1920"/>
+                <img src="2be4568c24151e8ffc13c3d7efc52f4662046f83df96de5002796744452b4cf0.png" title=" When Diligencio los campos necesarios en el formulario Datos Basicos
+| tipoId | id | genero | fecha | optPlaca | optFasecolda | fasecolda | servicio | zona | placa | valorAsegurado | marca | linea | clase | modelo |
+| Cedula De Ciudadania |  | Femenino | 10061996 | No | No |  | Particular | Bogota |  | 50000000 | FERRARI | 458 ITALIA TP 4500CC V8 | Automovil | 2024 |" width="1920"/>
+                <img src="f80e42caefe901d81af91d6d443e5653dfe98ca4daa7e2658422df0b68f3eb60.png" title=" When Diligencio los campos necesarios en el formulario Datos Basicos
+| tipoId | id | genero | fecha | optPlaca | optFasecolda | fasecolda | servicio | zona | placa | valorAsegurado | marca | linea | clase | modelo |
+| Cedula De Ciudadania |  | Femenino | 10061996 | No | No |  | Particular | Bogota |  | 50000000 | FERRARI | 458 ITALIA TP 4500CC V8 | Automovil | 2024 |" width="1920"/>
+                <img src="1c75b06c015c534ea21017835f7877f0b7f934fe41acdf0a2f6851087f1dc939.png" title=" When Diligencio los campos necesarios en el formulario Datos Basicos
+| tipoId | id | genero | fecha | optPlaca | optFasecolda | fasecolda | servicio | zona | placa | valorAsegurado | marca | linea | clase | modelo |
+| Cedula De Ciudadania |  | Femenino | 10061996 | No | No |  | Particular | Bogota |  | 50000000 | FERRARI | 458 ITALIA TP 4500CC V8 | Automovil | 2024 |" width="1920"/>
+                <img src="aec590270bd4a0731ece9a1e173320f8d5ecb6574c612a37a1c134b79d723773.png" title=" When Diligencio los campos necesarios en el formulario Datos Basicos
+| tipoId | id | genero | fecha | optPlaca | optFasecolda | fasecolda | servicio | zona | placa | valorAsegurado | marca | linea | clase | modelo |
+| Cedula De Ciudadania |  | Femenino | 10061996 | No | No |  | Particular | Bogota |  | 50000000 | FERRARI | 458 ITALIA TP 4500CC V8 | Automovil | 2024 |" width="1920"/>
+                <img src="25cf957ff13006cfd3e1e5878ce98f11f211d0e7ee549f7fdda86e46a2d7d166.png" title=" When Diligencio los campos necesarios en el formulario Datos Basicos
+| tipoId | id | genero | fecha | optPlaca | optFasecolda | fasecolda | servicio | zona | placa | valorAsegurado | marca | linea | clase | modelo |
+| Cedula De Ciudadania |  | Femenino | 10061996 | No | No |  | Particular | Bogota |  | 50000000 | FERRARI | 458 ITALIA TP 4500CC V8 | Automovil | 2024 |" width="1920"/>
+                <img src="8c52e76bd0124057236cc5366035c4ab0d573d0f74b26f237694b610e58240dd.png" title=" When Diligencio los campos necesarios en el formulario Datos Basicos
+| tipoId | id | genero | fecha | optPlaca | optFasecolda | fasecolda | servicio | zona | placa | valorAsegurado | marca | linea | clase | modelo |
+| Cedula De Ciudadania |  | Femenino | 10061996 | No | No |  | Particular | Bogota |  | 50000000 | FERRARI | 458 ITALIA TP 4500CC V8 | Automovil | 2024 |" width="1920"/>
+                <img src="182fb3bfe7cad4d029b8b85c868e119a04fa8245a4951a5123c5adf917111346.png" title=" When Diligencio los campos necesarios en el formulario Datos Basicos
+| tipoId | id | genero | fecha | optPlaca | optFasecolda | fasecolda | servicio | zona | placa | valorAsegurado | marca | linea | clase | modelo |
+| Cedula De Ciudadania |  | Femenino | 10061996 | No | No |  | Particular | Bogota |  | 50000000 | FERRARI | 458 ITALIA TP 4500CC V8 | Automovil | 2024 |" width="1920"/>
+                <img src="131b74491216bb4a77838c39cc44d3072160774e4496095dbe6b624c0efd33de.png" title=" When Diligencio los campos necesarios en el formulario Datos Basicos
+| tipoId | id | genero | fecha | optPlaca | optFasecolda | fasecolda | servicio | zona | placa | valorAsegurado | marca | linea | clase | modelo |
+| Cedula De Ciudadania |  | Femenino | 10061996 | No | No |  | Particular | Bogota |  | 50000000 | FERRARI | 458 ITALIA TP 4500CC V8 | Automovil | 2024 |" width="1920"/>
+                <img src="c01241b2d7c2ba217959735e3d81ee21c045a3b9ca9d4b0cb2799cceb111f52e.png" title=" When Diligencio los campos necesarios en el formulario Datos Basicos
+| tipoId | id | genero | fecha | optPlaca | optFasecolda | fasecolda | servicio | zona | placa | valorAsegurado | marca | linea | clase | modelo |
+| Cedula De Ciudadania |  | Femenino | 10061996 | No | No |  | Particular | Bogota |  | 50000000 | FERRARI | 458 ITALIA TP 4500CC V8 | Automovil | 2024 |" width="1920"/>
+                <img src="b8886f86e857ff3aac15649c25409561c93ddc43c0bed52d7c186c80fc5f148c.png" title=" When Diligencio los campos necesarios en el formulario Datos Basicos
+| tipoId | id | genero | fecha | optPlaca | optFasecolda | fasecolda | servicio | zona | placa | valorAsegurado | marca | linea | clase | modelo |
+| Cedula De Ciudadania |  | Femenino | 10061996 | No | No |  | Particular | Bogota |  | 50000000 | FERRARI | 458 ITALIA TP 4500CC V8 | Automovil | 2024 |" width="1920"/>
+                <img src="bf1fd94af77fc767c579782e0c5d7ee83c30221b9b57de712a215ded3d35c5e8.png" title=" When Diligencio los campos necesarios en el formulario Datos Basicos
+| tipoId | id | genero | fecha | optPlaca | optFasecolda | fasecolda | servicio | zona | placa | valorAsegurado | marca | linea | clase | modelo |
+| Cedula De Ciudadania |  | Femenino | 10061996 | No | No |  | Particular | Bogota |  | 50000000 | FERRARI | 458 ITALIA TP 4500CC V8 | Automovil | 2024 |" width="1920"/>
+                <img src="91a50f9025f1a01449340368ac83123610f8752a2e6e446b07d592fcae46f95d.png" title=" When Diligencio los campos necesarios en el formulario Datos Basicos
+| tipoId | id | genero | fecha | optPlaca | optFasecolda | fasecolda | servicio | zona | placa | valorAsegurado | marca | linea | clase | modelo |
+| Cedula De Ciudadania |  | Femenino | 10061996 | No | No |  | Particular | Bogota |  | 50000000 | FERRARI | 458 ITALIA TP 4500CC V8 | Automovil | 2024 |" width="1920"/>
+                <img src="bf2fe7f4faa7c59bc490231c5efe53677d8ed42f8e9315197e8cf4a51c73c83a.png" title=" When Diligencio los campos necesarios en el formulario Datos Basicos
+| tipoId | id | genero | fecha | optPlaca | optFasecolda | fasecolda | servicio | zona | placa | valorAsegurado | marca | linea | clase | modelo |
+| Cedula De Ciudadania |  | Femenino | 10061996 | No | No |  | Particular | Bogota |  | 50000000 | FERRARI | 458 ITALIA TP 4500CC V8 | Automovil | 2024 | (completed): <span class='success-color'>SUCCESS</span>" width="1920"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 3.3.2</span>
+</div>
+</body>
+</html>

@@ -1,0 +1,352 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="bootstrap-icons/font/bootstrap-icons.css"><!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.11.3/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.11.3/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.11.3/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/>
+<!--CHART.JS-->
+<script src="chartjs/chart.js"></script>
+<script src="chartjs/chartjs-plugin-datalabels@2.0.0"></script>
+<script src="chartjs/patternomaly.min.js"></script>
+<script>
+    // Register the plugin to all charts:
+    Chart.register(ChartDataLabels);
+</script>
+<!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">Templay POM</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="40bf05dbed2d4fa960d7618c4c25255f4bb3174dc924e006bae20b955bc681d6.html">Realizar Cotizacion De Vehiculo Con Usuario Intermediario</a></span>
+                > <span class="truncate-60"><a
+                    href="f50b99bed33e77ad5957e8de7245d7c85ba3bfdf7fef611c950c562749c3b97a.html">Cotizaci&oacute;n persona natural existente, codigo fasecolda, con datos adicionales e inhabilitado vehiculo en leasing y conductor habitual - Intermediario </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="bi bi-journal-check"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="bi bi-journal-text"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 08-03-2024 15:20</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fs-2 bi bi-chat-left-quote large-icon"></i>
+                                    <span class="story-header-title">Realizar Cotizacion De Vehiculo Con Usuario Intermediario </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="62501f680c252293a307aa136d25bea650022329f91655ab770de02f63ee7bf4.html">Regresion.intermediario
+                                    (tag)</a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="16c7de9488b4d0da3e539b2cc4d9546145c0d800be5ecf2f68a39d5ba1d93ee1.html">CP001
+                                    (tag)</a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="773a571d092c5846a3019576b732f5fa2a9b129891c011c10cda8839a7f193e0.html">Regresion
+                                    (tag)</a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-x-circle-fill failure-icon fa-2x' title='FAILURE'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="failing-color">Cotizaci&oacute;n persona natural existente, codigo fasecolda, con datos adicionales e inhabilitado vehiculo en leasing y conductor habitual - Intermediario
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+            <div class="screenshotFailure panel panel-danger">
+    <div style="display:block">
+        <div class="table">
+            <div class="row">
+                <div class="col-sm-10" style="padding-left:1.5em; padding-top:0.5em; padding-bottom:0.5em;">
+                    <span class="error-message error-message-title">Assertion error: El elemento no se mostr&oacute; en el tiempo establecido</span>
+                </div>
+                <div class="col-sm-2">
+                    <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-overall"
+                       role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><i class="bi bi-eye"></i> More details</a>
+                </div>
+             </div>
+        </div>
+    <div>
+
+    <!-- Details Section -->
+    <div class="row stacktrace-details">
+      <div class="col">
+        <div class="collapse multi-collapse" id="stacktraceModal-overall">
+            <div class="card">
+                <div class="card-header">
+                    <h4>java.lang.AssertionError </h4>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <pre>co.com.cloud.inhub.auto.utils.ExceptionsProyecto.lanzarExcepcion(ExceptionsProyecto.java:110)<br />co.com.cloud.inhub.auto.utils.ExceptionsProyecto.validaExcepcion(ExceptionsProyecto.java:86)<br />co.com.cloud.inhub.auto.utils.AccionesWeb.excepcionAccionesWeb(AccionesWeb.java:1133)<br />co.com.cloud.inhub.auto.utils.AccionesWeb.clickBoton(AccionesWeb.java:181)<br />co.com.cloud.inhub.auto.steps.StepsOferta.stepsOfertaSeleccionar(StepsOferta.java:17)<br />co.com.cloud.inhub.auto.stepdefinitions.CotizarVehiculoStepDefinitions.elijoLaOfertaOfrecida(CotizarVehiculoStepDefinitions.java:70)<br />io.cucumber.java.Invoker.doInvoke(Invoker.java:66)<br />io.cucumber.java.Invoker.invoke(Invoker.java:24)<br />io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)<br />io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)<br />io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)<br />io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)<br />io.cucumber.core.runner.TestStep.executeStep(TestStep.java:85)<br />io.cucumber.core.runner.TestStep.run(TestStep.java:57)<br />io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)<br />io.cucumber.core.runner.TestCase.run(TestCase.java:84)<br />io.cucumber.core.runner.Runner.runPickle(Runner.java:75)<br />io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:129)<br />io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)<br />io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:129)<br />io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:144)<br />io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:28)<br />io.cucumber.junit.FeatureRunner.run(FeatureRunner.java:137)<br />io.cucumber.junit.CucumberSerenityRunner.runChild(CucumberSerenityRunner.java:259)<br />io.cucumber.junit.CucumberSerenityRunner.runChild(CucumberSerenityRunner.java:59)<br />worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)<br />worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)<br /></pre>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+                <div class="panel-body">
+                    <a href="#" target="_blank" class="btn btn-info">HTML Source</a>
+                </div>
+            </div>
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="84700c7d1415f97e0868ade8955fd8d6e2ff3a4ef42cb6493747bb3c9496913c.png" title=" Given Consulto e ingreso a URL del asesor
+| claveAgente | stage | tipoBienCotizar |
+| 33426 | uat | autoLiviano |" width="1920"/>
+                <img src="84700c7d1415f97e0868ade8955fd8d6e2ff3a4ef42cb6493747bb3c9496913c.png" title=" And Consulto y elijo el asesor que cotizara &quot;&quot; con tipo &quot;Intermediario&quot;" width="1920"/>
+                <img src="0ef8f7d9284c41538fe5b486f5dd0a5d52bcb11c48d9f0315fa6cbb591168b34.png" title=" When Diligencio los campos necesarios en el formulario Datos Basicos
+| tipoId | id | genero | fecha | optPlaca | optFasecolda | fasecolda | servicio | zona | placa | valorAsegurado | marca | linea | clase | modelo |
+| Cedula De Ciudadania |  | Femenino | 10061996 | No | Si |  | Particular | Bogota |  | 50000000 | MAZDA | 121 LX MT 1300CC | Automovil | 2024 |" width="1920"/>
+                <img src="328b27d71c3bbb399d56ed00e1c37830841849e61f371f5a172ceefe87b7b65b.png" title=" When Diligencio los campos necesarios en el formulario Datos Basicos
+| tipoId | id | genero | fecha | optPlaca | optFasecolda | fasecolda | servicio | zona | placa | valorAsegurado | marca | linea | clase | modelo |
+| Cedula De Ciudadania |  | Femenino | 10061996 | No | Si |  | Particular | Bogota |  | 50000000 | MAZDA | 121 LX MT 1300CC | Automovil | 2024 |" width="1920"/>
+                <img src="2ffb3d44b4acc416fb1d695fdcd0d3d3bc0f45c1b1dd7b6779ae617dc42ce010.png" title=" When Diligencio los campos necesarios en el formulario Datos Basicos
+| tipoId | id | genero | fecha | optPlaca | optFasecolda | fasecolda | servicio | zona | placa | valorAsegurado | marca | linea | clase | modelo |
+| Cedula De Ciudadania |  | Femenino | 10061996 | No | Si |  | Particular | Bogota |  | 50000000 | MAZDA | 121 LX MT 1300CC | Automovil | 2024 |" width="1920"/>
+                <img src="cd2a5a3a4f6a70d2272d1281068fe813666608eec1e0c20f096b7c565e25ea15.png" title=" When Diligencio los campos necesarios en el formulario Datos Basicos
+| tipoId | id | genero | fecha | optPlaca | optFasecolda | fasecolda | servicio | zona | placa | valorAsegurado | marca | linea | clase | modelo |
+| Cedula De Ciudadania |  | Femenino | 10061996 | No | Si |  | Particular | Bogota |  | 50000000 | MAZDA | 121 LX MT 1300CC | Automovil | 2024 |" width="1920"/>
+                <img src="5b0c461e6f259e5f0bb7ccd1bca5efcde739d771bf195de73cec8c89a1c7523f.png" title=" When Diligencio los campos necesarios en el formulario Datos Basicos
+| tipoId | id | genero | fecha | optPlaca | optFasecolda | fasecolda | servicio | zona | placa | valorAsegurado | marca | linea | clase | modelo |
+| Cedula De Ciudadania |  | Femenino | 10061996 | No | Si |  | Particular | Bogota |  | 50000000 | MAZDA | 121 LX MT 1300CC | Automovil | 2024 |" width="1920"/>
+                <img src="ada092066385f5ec3a9818aaeacb0a072b71620e4043af5483bda6661a404556.png" title=" When Diligencio los campos necesarios en el formulario Datos Basicos
+| tipoId | id | genero | fecha | optPlaca | optFasecolda | fasecolda | servicio | zona | placa | valorAsegurado | marca | linea | clase | modelo |
+| Cedula De Ciudadania |  | Femenino | 10061996 | No | Si |  | Particular | Bogota |  | 50000000 | MAZDA | 121 LX MT 1300CC | Automovil | 2024 |" width="1920"/>
+                <img src="0f4fd30316a91829c90944e03fe52d126e5cc31035415a1c38de2c42f68fef72.png" title=" When Diligencio los campos necesarios en el formulario Datos Basicos
+| tipoId | id | genero | fecha | optPlaca | optFasecolda | fasecolda | servicio | zona | placa | valorAsegurado | marca | linea | clase | modelo |
+| Cedula De Ciudadania |  | Femenino | 10061996 | No | Si |  | Particular | Bogota |  | 50000000 | MAZDA | 121 LX MT 1300CC | Automovil | 2024 |" width="1920"/>
+                <img src="86d0841a5b07d12fef76ffbfdacb7ab25ff71251862fed36dfa40cd7d6ba0083.png" title=" When Diligencio los campos necesarios en el formulario Datos Basicos
+| tipoId | id | genero | fecha | optPlaca | optFasecolda | fasecolda | servicio | zona | placa | valorAsegurado | marca | linea | clase | modelo |
+| Cedula De Ciudadania |  | Femenino | 10061996 | No | Si |  | Particular | Bogota |  | 50000000 | MAZDA | 121 LX MT 1300CC | Automovil | 2024 |" width="1920"/>
+                <img src="3a7d1976e3d1824dc7e0e9b6fc4c22d215d8e4466ccdc09b902b60ca7765ae58.png" title=" When Diligencio los campos necesarios en el formulario Datos Basicos
+| tipoId | id | genero | fecha | optPlaca | optFasecolda | fasecolda | servicio | zona | placa | valorAsegurado | marca | linea | clase | modelo |
+| Cedula De Ciudadania |  | Femenino | 10061996 | No | Si |  | Particular | Bogota |  | 50000000 | MAZDA | 121 LX MT 1300CC | Automovil | 2024 |" width="1920"/>
+                <img src="323ce3615182883e796d7a1c233759d81b51093c74a3e78d0765d73770f553ca.png" title=" When Diligencio los campos necesarios en el formulario Datos Basicos
+| tipoId | id | genero | fecha | optPlaca | optFasecolda | fasecolda | servicio | zona | placa | valorAsegurado | marca | linea | clase | modelo |
+| Cedula De Ciudadania |  | Femenino | 10061996 | No | Si |  | Particular | Bogota |  | 50000000 | MAZDA | 121 LX MT 1300CC | Automovil | 2024 |" width="1920"/>
+                <img src="4c55d7d6b9d11b147a168b79685acdf67f722971a769c298bdfbefb9fdb9ac3b.png" title=" When Diligencio los campos necesarios en el formulario Datos Basicos
+| tipoId | id | genero | fecha | optPlaca | optFasecolda | fasecolda | servicio | zona | placa | valorAsegurado | marca | linea | clase | modelo |
+| Cedula De Ciudadania |  | Femenino | 10061996 | No | Si |  | Particular | Bogota |  | 50000000 | MAZDA | 121 LX MT 1300CC | Automovil | 2024 |" width="1920"/>
+                <img src="9dda407b8b5270f85cd3b855940f8368626688dbc3440626136d328bb2a2d88c.png" title=" When Diligencio los campos necesarios en el formulario Datos Basicos
+| tipoId | id | genero | fecha | optPlaca | optFasecolda | fasecolda | servicio | zona | placa | valorAsegurado | marca | linea | clase | modelo |
+| Cedula De Ciudadania |  | Femenino | 10061996 | No | Si |  | Particular | Bogota |  | 50000000 | MAZDA | 121 LX MT 1300CC | Automovil | 2024 |" width="1920"/>
+                <img src="ae219cf037685057bcb4ca3d1e33170caa703da8da0ad9ee835123d908f41334.png" title=" When Diligencio los campos necesarios en el formulario Datos Basicos
+| tipoId | id | genero | fecha | optPlaca | optFasecolda | fasecolda | servicio | zona | placa | valorAsegurado | marca | linea | clase | modelo |
+| Cedula De Ciudadania |  | Femenino | 10061996 | No | Si |  | Particular | Bogota |  | 50000000 | MAZDA | 121 LX MT 1300CC | Automovil | 2024 |" width="1920"/>
+                <img src="9c16ad345a5f1f5986876e6a9d044d3de63a57f1ff376785342b3205394b66c6.png" title=" When Diligencio los campos necesarios en el formulario Datos Basicos
+| tipoId | id | genero | fecha | optPlaca | optFasecolda | fasecolda | servicio | zona | placa | valorAsegurado | marca | linea | clase | modelo |
+| Cedula De Ciudadania |  | Femenino | 10061996 | No | Si |  | Particular | Bogota |  | 50000000 | MAZDA | 121 LX MT 1300CC | Automovil | 2024 |" width="1920"/>
+                <img src="066f3502168ac38e92e2f7a64fa92796a035cb91a142d3e5b87c0725d4e89bde.png" title=" When Diligencio los campos necesarios en el formulario Datos Basicos
+| tipoId | id | genero | fecha | optPlaca | optFasecolda | fasecolda | servicio | zona | placa | valorAsegurado | marca | linea | clase | modelo |
+| Cedula De Ciudadania |  | Femenino | 10061996 | No | Si |  | Particular | Bogota |  | 50000000 | MAZDA | 121 LX MT 1300CC | Automovil | 2024 |" width="1920"/>
+                <img src="376510c7224789bb69c1a87b29fe797fcdca929bf30c0c1cb62ca3c8d21894bd.png" title=" When Diligencio los campos necesarios en el formulario Datos Basicos
+| tipoId | id | genero | fecha | optPlaca | optFasecolda | fasecolda | servicio | zona | placa | valorAsegurado | marca | linea | clase | modelo |
+| Cedula De Ciudadania |  | Femenino | 10061996 | No | Si |  | Particular | Bogota |  | 50000000 | MAZDA | 121 LX MT 1300CC | Automovil | 2024 |" width="1920"/>
+                <img src="1b22fba10e76186782d8dd947704b68cc170e491e4fd9a92d77a6c6823a1caa1.png" title=" When Diligencio los campos necesarios en el formulario Datos Basicos
+| tipoId | id | genero | fecha | optPlaca | optFasecolda | fasecolda | servicio | zona | placa | valorAsegurado | marca | linea | clase | modelo |
+| Cedula De Ciudadania |  | Femenino | 10061996 | No | Si |  | Particular | Bogota |  | 50000000 | MAZDA | 121 LX MT 1300CC | Automovil | 2024 | (completed)" width="1920"/>
+                <img src="495e73fc5af8071aef8d832550d3deead321be1836398e79e1f827aa13b035a2.png" title=" And Diligencio los campos necesarios en el formulario Datos Adicionales
+| optAccesorios | valorAccesorios | optBlindaje | valorBlindaje | optLocatario | tipoIdLocatario | idLocatario | nombreLocatario | generoLocatario | fechaLocatario | optHabitual | tipoIdHabitual | idHabitual | nombreHabitual | generoHabitual | fechaHabitual |
+| Si |  | Si |  |  |  |  |  |  |  |  |  |  |  |  |  |" width="1920"/>
+                <img src="80381a5c9d3d9874c162eec6fc6d0c535a324df7127da876442a3a1f9532b9e2.png" title=" And Diligencio los campos necesarios en el formulario Datos Adicionales
+| optAccesorios | valorAccesorios | optBlindaje | valorBlindaje | optLocatario | tipoIdLocatario | idLocatario | nombreLocatario | generoLocatario | fechaLocatario | optHabitual | tipoIdHabitual | idHabitual | nombreHabitual | generoHabitual | fechaHabitual |
+| Si |  | Si |  |  |  |  |  |  |  |  |  |  |  |  |  |" width="1920"/>
+                <img src="918767cbba9ef02808df8c228d460194d1bd761ac23518d9cb712adab55ce09e.png" title=" And Diligencio los campos necesarios en el formulario Datos Adicionales
+| optAccesorios | valorAccesorios | optBlindaje | valorBlindaje | optLocatario | tipoIdLocatario | idLocatario | nombreLocatario | generoLocatario | fechaLocatario | optHabitual | tipoIdHabitual | idHabitual | nombreHabitual | generoHabitual | fechaHabitual |
+| Si |  | Si |  |  |  |  |  |  |  |  |  |  |  |  |  |" width="1920"/>
+                <img src="c508dbee3a1743c2643d80b82502b36b07dda79d531d1a7fab6a32158d93060e.png" title=" And Diligencio los campos necesarios en el formulario Datos Adicionales
+| optAccesorios | valorAccesorios | optBlindaje | valorBlindaje | optLocatario | tipoIdLocatario | idLocatario | nombreLocatario | generoLocatario | fechaLocatario | optHabitual | tipoIdHabitual | idHabitual | nombreHabitual | generoHabitual | fechaHabitual |
+| Si |  | Si |  |  |  |  |  |  |  |  |  |  |  |  |  |" width="1920"/>
+                <img src="c76997713b59059cd52a01e6f2349001dc64f536b40fc91ccd5c629c8d70b03f.png" title=" And Diligencio los campos necesarios en el formulario Datos Adicionales
+| optAccesorios | valorAccesorios | optBlindaje | valorBlindaje | optLocatario | tipoIdLocatario | idLocatario | nombreLocatario | generoLocatario | fechaLocatario | optHabitual | tipoIdHabitual | idHabitual | nombreHabitual | generoHabitual | fechaHabitual |
+| Si |  | Si |  |  |  |  |  |  |  |  |  |  |  |  |  |" width="1920"/>
+                <img src="529cf44a0109ac75a249523b60f41d917bda9677e9f46896a60ae8a0a5692804.png" title=" And Diligencio los campos necesarios en el formulario Datos Adicionales
+| optAccesorios | valorAccesorios | optBlindaje | valorBlindaje | optLocatario | tipoIdLocatario | idLocatario | nombreLocatario | generoLocatario | fechaLocatario | optHabitual | tipoIdHabitual | idHabitual | nombreHabitual | generoHabitual | fechaHabitual |
+| Si |  | Si |  |  |  |  |  |  |  |  |  |  |  |  |  | (completed)" width="1920"/>
+                <img src="529cf44a0109ac75a249523b60f41d917bda9677e9f46896a60ae8a0a5692804.png" title=" And Elijo la oferta ofrecida
+| producto | asistencia |
+| PLUS | VIP |" width="1920"/>
+                <img src="b9a25e43104ed100d2b13be3102680b49a8de2f3d4b22fbf77f2adfae041aa9f.png" title=" Steps oferta seleccionar: DatosOfertaModel(producto=PLUS, asistencia=VIP): <span class='failing-color'>FAILURE</span>" width="1920"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 3.3.2</span>
+</div>
+</body>
+</html>

@@ -1,0 +1,5 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Realizar cotizacion de vehiculo","Cotización persona juridica inexistente, codigo fasecolda y sin datos adicionales - Backoffice.","SUCCESS","2024-03-06T08:31:26.4088124-05:00[America/Bogota]","0.0","314.66"
+"Realizar cotizacion de vehiculo","Cotización persona juridica inexistente, codigo fasecolda y sin datos adicionales - Backoffice","SUCCESS","2024-03-06T10:55:59.39798-05:00[America/Bogota]","0.0","317.11"
+"Realizar cotizacion de vehiculo con usuario aliado","Cotización persona jurídica inexistente, código fasecolda y sin datos adicionales - Aliado","SUCCESS","2024-03-06T11:55:38.7412283-05:00[America/Bogota]","0.0","276.37"
+"Realizar cotizacion de vehiculo con usuario intermediario","Cotización persona jurídica inexistente, código fasecolda y sin datos adicionales - Intermediario","SUCCESS","2024-03-06T12:39:25.0645112-05:00[America/Bogota]","0.0","280.65"

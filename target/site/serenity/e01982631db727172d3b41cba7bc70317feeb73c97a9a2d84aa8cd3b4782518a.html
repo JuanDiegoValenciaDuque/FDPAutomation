@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>Cotización persona natural en inbroker, sin placa, sin código fasecolda, con datos adicionales e inhabilitado vehículo en leasing y conductor habitual - Intermediario</title>
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff"><link rel="stylesheet" href="bootstrap-icons/font/bootstrap-icons.css"><!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.11.3/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.11.3/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.11.3/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/>
+<!--CHART.JS-->
+<script src="chartjs/chart.js"></script>
+<script src="chartjs/chartjs-plugin-datalabels@2.0.0"></script>
+<script src="chartjs/patternomaly.min.js"></script>
+<script>
+    // Register the plugin to all charts:
+    Chart.register(ChartDataLabels);
+</script>
+<!-- JQuery-UI -->
+<link type="text/css" href="jqueryui/1.11.2-start/jquery-ui.min.css" rel="Stylesheet" />
+<script type="text/javascript" src="jqueryui/1.11.2-start/jquery-ui.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.11.3/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.11.3/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.11.3/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<!-- ImgPreview -->
+<script src="scripts/imgpreview.full.jquery.js" type="text/javascript"></script>
+</head>
+
+<body class="results-page">
+
+
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">Templay POM</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+        <span class="breadcrumbs">
+            <a href="index.html" class="breadcrumbs">Home</a>
+
+ <!-- inflection.of(breadcrumb.displayName).asATitle()-->
+            > <a href="40bf05dbed2d4fa960d7618c4c25255f4bb3174dc924e006bae20b955bc681d6.html">Realizar cotizacion de vehiculo con usuario intermediario</a>
+        > Cotizaci&oacute;n persona natural en inbroker, sin placa, sin c&oacute;digo fasecolda, con datos adicionales e inhabilitado veh&iacute;culo en leasing y conductor habitual - Intermediario
+        </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="bi bi-journal-check"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="bi bi-journal-text"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 06-03-2024 13:05</span>
+    <br style="clear:left"/>
+</div>
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                                <div>
+                                    <h3 class="discreet-story-header">
+                                        <i class="fs-2 bi bi-chat-left-quote title-icon"></i>
+                                        <span class="story-header-title">Realizar Cotizacion De Vehiculo Con Usuario Intermediario </span>
+                                    </h3>
+
+                                </div>
+
+                        </td>
+                        <td valign="top">
+                            <p class="tag">
+                                    <span class="badge example-tag tag-badge" style="background:default;">
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;"
+                                                                      href="62501f680c252293a307aa136d25bea650022329f91655ab770de02f63ee7bf4.html">Regresion.intermediario
+                                    (tag)</a>
+                                </span>
+                                    <span class="badge example-tag tag-badge" style="background:default;">
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;"
+                                                                      href="773a571d092c5846a3019576b732f5fa2a9b129891c011c10cda8839a7f193e0.html">Regresion
+                                    (tag)</a>
+                                </span>
+                                    <span class="badge example-tag tag-badge" style="background:default;">
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;"
+                                                                      href="664f6a8d6d9ccf944091b0d6b6fdd5cff857eb8b739f5aacc14742fdb2b468f1.html">CP009
+                                    (tag)</a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">
+                                    Cotizaci&oacute;n persona natural en inbroker, sin placa, sin c&oacute;digo fasecolda, con datos adicionales e inhabilitado veh&iacute;culo en leasing y conductor habitual - Intermediario
+                                        <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+
+
+</div>
+</div>
+
+<div class="clr"></div>
+
+
+<div id="beforetable"></div>
+
+
+<div id="tablecontents">
+    <div>
+        <table class="step-table">
+            <tr class="step-titles">
+                <th width="65">
+                </th>
+                <th class="step-description-column greentext">
+                    Steps
+                </th>
+
+                    <th width="150" class="greentext">Screenshots</th>
+                <th width="130" class="greentext">Outcome</th>
+                <th width="100" class="greentext"><i title="Duration" class="bi bi-stopwatch"></i></th>
+            </tr>
+            <tr class="step-table-separator">
+                <td colspan="5"></td>
+            </tr>
+
+                <tr class="test-SUCCESS">
+
+                    <td width="50" class="step-icon">
+                        <a name="0"></a>
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0')"
+                               style="display:block">
+                                <i class="bi bi-plus-square imgstepSection0 success-icon"
+                                   style="margin-left: 20px; float:left; padding-right:5px"></i>
+                            </a>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0')"
+                               style="display:block;">
+                                <span class="top-level-step">
+                                                Given Consulto e ingreso a URL del asesor<br><table class='embedded'><thead><th>claveAgente</th><th>stage</th><th>tipoBienCotizar</th></thead><tbody><tr><td>33426</td><td>uat</td><td>autoLiviano</td></tr></tbody></table>
+                                        </span>
+                            </a>
+                            <span class="evidence">
+                                </span>
+                        </div>
+                    </td>
+
+                        <td width="160" class="SUCCESS-text">
+
+                                <a href="e01982631db727172d3b41cba7bc70317feeb73c97a9a2d84aa8cd3b4782518a_screenshots.html#screenshots?screenshot=1">
+                                    <img src="7ecfc903837c89e0d91e8583e1f936a90410e99940d3dcf5ed876bd74e0165b1.png"
+                                         href="7ecfc903837c89e0d91e8583e1f936a90410e99940d3dcf5ed876bd74e0165b1.png"
+                                         class="screenshot"
+                                         width="48" height="48"/>
+                                </a>
+                        </td>
+                    <td width="130"><span class="top-level-step">SUCCESS</span></td>
+                    <td width="100"><span class="top-level-step">17s 367ms</span></td>
+                </tr>
+                    <tr>
+                        <td colspan="5">
+                            <table id="stepSection0" class="step-table-nested" style="display:none;">
+                <tr class="test-SUCCESS">
+
+                    <td width="70" class="step-icon">
+                        <a name="0-0"></a>
+                            <span style="margin-left: 40px;"
+                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
+                                </span>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                                <span class="nested-group-step">
+                                                POST https://uat-api.inhub.cloud/api/v1/7f407882-2fdc-4093-bee5-ca514f19a855/axa-cotizacion-portal/c/digital/actions/cotizacion-axa-colpatria/v1/start_session_external?product%5Bportal%5D=axa-cotizacion-portal&amp;product%5Broute%5D=root
+                                        </span>
+                            <span class="evidence">
+                                        <span class="piece-of-evidence">
+                <span>
+                        <button type="button" class="btn btn-success btn-sm" data-toggle="collapse"
+                                data-target="#restModal-REST-2">
+                            REST Query
+                        </button>
+                    </span>
+                <!-- Modal -->
+                <div class="rest-query-details">
+                    <div class="collapse multi-collapse" id="restModal-REST-2">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4>Response</h4>
+                                    <p>URL: https://uat-api.inhub.cloud/api/v1/7f407882-2fdc-4093-bee5-ca514f19a855/axa-cotizacion-portal/c/digital/actions/cotizacion-axa-colpatria/v1/start_session_external?product%5Bportal%5D=axa-cotizacion-portal&product%5Broute%5D=root</p>
+                                    <p>Status code: 200</p>
+                                    <p>Content Type: application/json</p>
+                                    <h4>Request Headers</h4>
+                                    <pre>x-cti-debug=true<br>Accept=*/*<br>Content-Type=application/json</pre>
+                                    <h4>Content Body</h4>
+                                    <pre>{<br>    &quot;claveDeAgente&quot;: 33426,<br>    &quot;stage&quot;: &quot;uat&quot;,<br>    &quot;uat&quot;: &quot;autoLiviano&quot;<br>}</pre>
+                                    <h4>Response Headers</h4>
+                                    <pre>Date: Wed, 06 Mar 2024 18:05:32 GMT<br>Content-Type: application/json; charset=utf-8<br>Content-Length: 105<br>Connection: keep-alive<br>Request-Context: appId=cid-v1:cf8b80ec-6fe7-400f-9e66-2960e50c7eac<br>X-Frame-Options: DENY<br>traceparent: 00-251fea281cecaf5c7f804e658fe6aeb6-88b7509295a2e42c-01<br>x-azure-ref: 20240306T180531Z-1yuusz7gmd7kf6xepzmb7q4m2s00000004p00000000130z1<br>X-Cache: CONFIG_NOCACHE<br>Accept-Ranges: bytes</pre>
+                                <h4>Response Body</h4>
+                                    <pre>{<br>    &quot;data&quot;: {<br>        &quot;url&quot;: &quot;https://axa-auto-uat.inhub.cloud/init/de6ba2b0-562d-4fe4-8070-9b8ef7b6f443&quot;<br>    },<br>    &quot;errors&quot;: [<br>        <br>    ]<br>}</pre>
+                                    <h4>Response Cookies</h4>
+                                    <pre></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                                        </span>
+                                        <span class="piece-of-evidence">
+                <a name="report-data-4e380739-f262-4b4b-8ab8-09e61f7598e1"></a>
+                <span>
+                    <button type="button" class="btn btn-success btn-sm" data-toggle="collapse"
+                            data-target="#reportData-EVIDENCE-2-0">
+                        Tiempo
+                    </button>
+                </span>
+                <div class="rest-query-details">
+                    <div class="collapse multi-collapse" id="reportData-EVIDENCE-2-0" tabindex="-1" role="dialog"
+                         aria-labelledby="restModalLabel" aria-hidden="true">
+                        <div class="card">
+                            <h4 class="card-header" id="restModalLabel">
+                                Tiempo
+                            </h4>
+                        </div>
+                        <div class="card-body"><pre>Se esta realizando una espera de 10 segundos</pre></div>
+                    </div>
+                </div>
+                                            </span>
+                                </span>
+                        </div>
+                    </td>
+
+                        <td width="160" class="SUCCESS-text">
+
+                        </td>
+                    <td width="130"><span class="nested-group-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-group-step"></span></td>
+                </tr>
+
+                            </table>
+                        </td>
+                    </tr>
+                <tr class="test-SUCCESS">
+
+                    <td width="50" class="step-icon">
+                        <a name="1"></a>
+                            <span style="margin-left: 20px;"
+                                  class="top-level-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
+                                </span>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                                <span class="top-level-step">
+                                                And Consulto y elijo el asesor que cotizara "" con tipo "Intermediario"
+                                        </span>
+                            <span class="evidence">
+                                </span>
+                        </div>
+                    </td>
+
+                        <td width="160" class="SUCCESS-text">
+
+                                <a href="e01982631db727172d3b41cba7bc70317feeb73c97a9a2d84aa8cd3b4782518a_screenshots.html#screenshots?screenshot=2">
+                                    <img src="7ecfc903837c89e0d91e8583e1f936a90410e99940d3dcf5ed876bd74e0165b1.png"
+                                         href="7ecfc903837c89e0d91e8583e1f936a90410e99940d3dcf5ed876bd74e0165b1.png"
+                                         class="screenshot"
+                                         width="48" height="48"/>
+                                </a>
+                        </td>
+                    <td width="130"><span class="top-level-step">SUCCESS</span></td>
+                    <td width="100"><span class="top-level-step">195ms</span></td>
+                </tr>
+                <tr class="test-SUCCESS">
+
+                    <td width="50" class="step-icon">
+                        <a name="2"></a>
+                            <span style="margin-left: 20px;"
+                                  class="top-level-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
+                                </span>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                                <span class="top-level-step">
+                                                When Diligencio los campos necesarios en el formulario Datos Basicos<br><table class='embedded'><thead><th>tipoId</th><th>id</th><th>genero</th><th>fecha</th><th>optPlaca</th><th>optFasecolda</th><th>fasecolda</th><th>servicio</th><th>zona</th><th>placa</th><th>valorAsegurado</th><th>marca</th><th>linea</th><th>clase</th><th>modelo</th></thead><tbody><tr><td>Cedula De Ciudadania</td><td></td><td>Femenino</td><td>10061996</td><td>No</td><td>No</td><td></td><td>Particular</td><td>Bogota</td><td></td><td>50000000</td><td>MAZDA</td><td>121 LX MT 1300CC</td><td>Automovil</td><td>2024</td></tr></tbody></table>
+                                        </span>
+                            <span class="evidence">
+                                        <span class="piece-of-evidence">
+                <a name="report-data-d9f61de8-08b6-421c-a7c2-d44337314d60"></a>
+                <span>
+                    <button type="button" class="btn btn-success btn-sm" data-toggle="collapse"
+                            data-target="#reportData-EVIDENCE-4-0">
+                        Tiempo
+                    </button>
+                </span>
+                <div class="rest-query-details">
+                    <div class="collapse multi-collapse" id="reportData-EVIDENCE-4-0" tabindex="-1" role="dialog"
+                         aria-labelledby="restModalLabel" aria-hidden="true">
+                        <div class="card">
+                            <h4 class="card-header" id="restModalLabel">
+                                Tiempo
+                            </h4>
+                        </div>
+                        <div class="card-body"><pre>Se esta realizando una espera de 10 segundos</pre></div>
+                    </div>
+                </div>
+                                            </span>
+                                        <span class="piece-of-evidence">
+                <a name="report-data-57ebee47-ced4-42e5-b999-a4f7ce474c70"></a>
+                <span>
+                    <button type="button" class="btn btn-success btn-sm" data-toggle="collapse"
+                            data-target="#reportData-EVIDENCE-4-1">
+                        Tiempo
+                    </button>
+                </span>
+                <div class="rest-query-details">
+                    <div class="collapse multi-collapse" id="reportData-EVIDENCE-4-1" tabindex="-1" role="dialog"
+                         aria-labelledby="restModalLabel" aria-hidden="true">
+                        <div class="card">
+                            <h4 class="card-header" id="restModalLabel">
+                                Tiempo
+                            </h4>
+                        </div>
+                        <div class="card-body"><pre>Se esta realizando una espera de 10 segundos</pre></div>
+                    </div>
+                </div>
+                                            </span>
+                                        <span class="piece-of-evidence">
+                <a name="report-data-385e05e4-2a97-43f3-8b0f-99b3a12e37cb"></a>
+                <span>
+                    <button type="button" class="btn btn-success btn-sm" data-toggle="collapse"
+                            data-target="#reportData-EVIDENCE-4-2">
+                        Tiempo
+                    </button>
+                </span>
+                <div class="rest-query-details">
+                    <div class="collapse multi-collapse" id="reportData-EVIDENCE-4-2" tabindex="-1" role="dialog"
+                         aria-labelledby="restModalLabel" aria-hidden="true">
+                        <div class="card">
+                            <h4 class="card-header" id="restModalLabel">
+                                Tiempo
+                            </h4>
+                        </div>
+                        <div class="card-body"><pre>Se esta realizando una espera de 10 segundos</pre></div>
+                    </div>
+                </div>
+                                            </span>
+                                        <span class="piece-of-evidence">
+                <a name="report-data-aadb8c79-37dd-4ea9-b88e-ad7bd7250d23"></a>
+                <span>
+                    <button type="button" class="btn btn-success btn-sm" data-toggle="collapse"
+                            data-target="#reportData-EVIDENCE-4-3">
+                        Tiempo
+                    </button>
+                </span>
+                <div class="rest-query-details">
+                    <div class="collapse multi-collapse" id="reportData-EVIDENCE-4-3" tabindex="-1" role="dialog"
+                         aria-labelledby="restModalLabel" aria-hidden="true">
+                        <div class="card">
+                            <h4 class="card-header" id="restModalLabel">
+                                Tiempo
+                            </h4>
+                        </div>
+                        <div class="card-body"><pre>Se esta realizando una espera de 10 segundos</pre></div>
+                    </div>
+                </div>
+                                            </span>
+                                        <span class="piece-of-evidence">
+                <a name="report-data-acfe36ce-b2e2-4d2d-8948-2c7a44de16a1"></a>
+                <span>
+                    <button type="button" class="btn btn-success btn-sm" data-toggle="collapse"
+                            data-target="#reportData-EVIDENCE-4-4">
+                        Tiempo
+                    </button>
+                </span>
+                <div class="rest-query-details">
+                    <div class="collapse multi-collapse" id="reportData-EVIDENCE-4-4" tabindex="-1" role="dialog"
+                         aria-labelledby="restModalLabel" aria-hidden="true">
+                        <div class="card">
+                            <h4 class="card-header" id="restModalLabel">
+                                Tiempo
+                            </h4>
+                        </div>
+                        <div class="card-body"><pre>Se esta realizando una espera de 10 segundos</pre></div>
+                    </div>
+                </div>
+                                            </span>
+                                        <span class="piece-of-evidence">
+                <a name="report-data-f57c9b1f-1e10-49bb-a0ad-b69474812c70"></a>
+                <span>
+                    <button type="button" class="btn btn-success btn-sm" data-toggle="collapse"
+                            data-target="#reportData-EVIDENCE-4-5">
+                        Tiempo
+                    </button>
+                </span>
+                <div class="rest-query-details">
+                    <div class="collapse multi-collapse" id="reportData-EVIDENCE-4-5" tabindex="-1" role="dialog"
+                         aria-labelledby="restModalLabel" aria-hidden="true">
+                        <div class="card">
+                            <h4 class="card-header" id="restModalLabel">
+                                Tiempo
+                            </h4>
+                        </div>
+                        <div class="card-body"><pre>Se esta realizando una espera de 10 segundos</pre></div>
+                    </div>
+                </div>
+                                            </span>
+                                        <span class="piece-of-evidence">
+                <a name="report-data-cfb9ada3-b81f-4670-8bc4-06b6b301b464"></a>
+                <span>
+                    <button type="button" class="btn btn-success btn-sm" data-toggle="collapse"
+                            data-target="#reportData-EVIDENCE-4-6">
+                        Tiempo
+                    </button>
+                </span>
+                <div class="rest-query-details">
+                    <div class="collapse multi-collapse" id="reportData-EVIDENCE-4-6" tabindex="-1" role="dialog"
+                         aria-labelledby="restModalLabel" aria-hidden="true">
+                        <div class="card">
+                            <h4 class="card-header" id="restModalLabel">
+                                Tiempo
+                            </h4>
+                        </div>
+                        <div class="card-body"><pre>Se esta realizando una espera de 5 segundos</pre></div>
+                    </div>
+                </div>
+                                            </span>
+                                        <span class="piece-of-evidence">
+                <a name="report-data-4c9b3ed9-e33e-47e6-8151-95294fbd7a8e"></a>
+                <span>
+                    <button type="button" class="btn btn-success btn-sm" data-toggle="collapse"
+                            data-target="#reportData-EVIDENCE-4-7">
+                        Tiempo
+                    </button>
+                </span>
+                <div class="rest-query-details">
+                    <div class="collapse multi-collapse" id="reportData-EVIDENCE-4-7" tabindex="-1" role="dialog"
+                         aria-labelledby="restModalLabel" aria-hidden="true">
+                        <div class="card">
+                            <h4 class="card-header" id="restModalLabel">
+                                Tiempo
+                            </h4>
+                        </div>
+                        <div class="card-body"><pre>Se esta realizando una espera de 5 segundos</pre></div>
+                    </div>
+                </div>
+                                            </span>
+                                        <span class="piece-of-evidence">
+                <a name="report-data-983f6aea-013e-4c84-9103-c5e2cd4fa9ff"></a>
+                <span>
+                    <button type="button" class="btn btn-success btn-sm" data-toggle="collapse"
+                            data-target="#reportData-EVIDENCE-4-8">
+                        Tiempo
+                    </button>
+                </span>
+                <div class="rest-query-details">
+                    <div class="collapse multi-collapse" id="reportData-EVIDENCE-4-8" tabindex="-1" role="dialog"
+                         aria-labelledby="restModalLabel" aria-hidden="true">
+                        <div class="card">
+                            <h4 class="card-header" id="restModalLabel">
+                                Tiempo
+                            </h4>
+                        </div>
+                        <div class="card-body"><pre>Se esta realizando una espera de 5 segundos</pre></div>
+                    </div>
+                </div>
+                                            </span>
+                                        <span class="piece-of-evidence">
+                <a name="report-data-4cd8e777-1730-40f5-af58-9d32c9bba035"></a>
+                <span>
+                    <button type="button" class="btn btn-success btn-sm" data-toggle="collapse"
+                            data-target="#reportData-EVIDENCE-4-9">
+                        Tiempo
+                    </button>
+                </span>
+                <div class="rest-query-details">
+                    <div class="collapse multi-collapse" id="reportData-EVIDENCE-4-9" tabindex="-1" role="dialog"
+                         aria-labelledby="restModalLabel" aria-hidden="true">
+                        <div class="card">
+                            <h4 class="card-header" id="restModalLabel">
+                                Tiempo
+                            </h4>
+                        </div>
+                        <div class="card-body"><pre>Se esta realizando una espera de 10 segundos</pre></div>
+                    </div>
+                </div>
+                                            </span>
+                                        <span class="piece-of-evidence">
+                <a name="report-data-b718d369-d3e8-4b45-95f1-3420a0ebb1c0"></a>
+                <span>
+                    <button type="button" class="btn btn-success btn-sm" data-toggle="collapse"
+                            data-target="#reportData-EVIDENCE-4-10">
+                        Tiempo
+                    </button>
+                </span>
+                <div class="rest-query-details">
+                    <div class="collapse multi-collapse" id="reportData-EVIDENCE-4-10" tabindex="-1" role="dialog"
+                         aria-labelledby="restModalLabel" aria-hidden="true">
+                        <div class="card">
+                            <h4 class="card-header" id="restModalLabel">
+                                Tiempo
+                            </h4>
+                        </div>
+                        <div class="card-body"><pre>Se esta realizando una espera de 10 segundos</pre></div>
+                    </div>
+                </div>
+                                            </span>
+                                        <span class="piece-of-evidence">
+                <a name="report-data-17a2e67f-dbf5-42e3-99c9-65fd860a4480"></a>
+                <span>
+                    <button type="button" class="btn btn-success btn-sm" data-toggle="collapse"
+                            data-target="#reportData-EVIDENCE-4-11">
+                        Tiempo
+                    </button>
+                </span>
+                <div class="rest-query-details">
+                    <div class="collapse multi-collapse" id="reportData-EVIDENCE-4-11" tabindex="-1" role="dialog"
+                         aria-labelledby="restModalLabel" aria-hidden="true">
+                        <div class="card">
+                            <h4 class="card-header" id="restModalLabel">
+                                Tiempo
+                            </h4>
+                        </div>
+                        <div class="card-body"><pre>Se esta realizando una espera de 10 segundos</pre></div>
+                    </div>
+                </div>
+                                            </span>
+                                        <span class="piece-of-evidence">
+                <a name="report-data-c2fb57ff-f853-452c-99ad-9ce38da90cae"></a>
+                <span>
+                    <button type="button" class="btn btn-success btn-sm" data-toggle="collapse"
+                            data-target="#reportData-EVIDENCE-4-12">
+                        Tiempo
+                    </button>
+                </span>
+                <div class="rest-query-details">
+                    <div class="collapse multi-collapse" id="reportData-EVIDENCE-4-12" tabindex="-1" role="dialog"
+                         aria-labelledby="restModalLabel" aria-hidden="true">
+                        <div class="card">
+                            <h4 class="card-header" id="restModalLabel">
+                                Tiempo
+                            </h4>
+                        </div>
+                        <div class="card-body"><pre>Se esta realizando una espera de 10 segundos</pre></div>
+                    </div>
+                </div>
+                                            </span>
+                                        <span class="piece-of-evidence">
+                <a name="report-data-1092c09a-d592-4ff9-9362-d926c626cdfb"></a>
+                <span>
+                    <button type="button" class="btn btn-success btn-sm" data-toggle="collapse"
+                            data-target="#reportData-EVIDENCE-4-13">
+                        Tiempo
+                    </button>
+                </span>
+                <div class="rest-query-details">
+                    <div class="collapse multi-collapse" id="reportData-EVIDENCE-4-13" tabindex="-1" role="dialog"
+                         aria-labelledby="restModalLabel" aria-hidden="true">
+                        <div class="card">
+                            <h4 class="card-header" id="restModalLabel">
+                                Tiempo
+                            </h4>
+                        </div>
+                        <div class="card-body"><pre>Se esta realizando una espera de 10 segundos</pre></div>
+                    </div>
+                </div>
+                                            </span>
+                                </span>
+                        </div>
+                    </td>
+
+                        <td width="160" class="SUCCESS-text">
+                                <a href="e01982631db727172d3b41cba7bc70317feeb73c97a9a2d84aa8cd3b4782518a_screenshots.html#screenshots?screenshot=3">
+                                    <img src="e222582babda552e216791c57e723d5578fee7d1528872f7f37bdba474549ed3.png"
+                                         href="e222582babda552e216791c57e723d5578fee7d1528872f7f37bdba474549ed3.png"
+                                         class="screenshot"
+                                         width="48" height="48"/>
+                                </a>
+                                <i class="bi bi-arrow-right"></i>
+
+                                <a href="e01982631db727172d3b41cba7bc70317feeb73c97a9a2d84aa8cd3b4782518a_screenshots.html#screenshots?screenshot=26">
+                                    <img src="99f7cda237c896bf86181bc41184e442438c0a07e2199071882115c6abdbd4c7.png"
+                                         href="99f7cda237c896bf86181bc41184e442438c0a07e2199071882115c6abdbd4c7.png"
+                                         class="screenshot"
+                                         width="48" height="48"/>
+                                </a>
+                        </td>
+                    <td width="130"><span class="top-level-step">SUCCESS</span></td>
+                    <td width="100"><span class="top-level-step">2m 24s</span></td>
+                </tr>
+                <tr class="test-SUCCESS">
+
+                    <td width="50" class="step-icon">
+                        <a name="3"></a>
+                            <span style="margin-left: 20px;"
+                                  class="top-level-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
+                                </span>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                                <span class="top-level-step">
+                                                And Diligencio los campos necesarios en el formulario Datos Adicionales<br><table class='embedded'><thead><th>optAccesorios</th><th>valorAccesorios</th><th>optBlindaje</th><th>valorBlindaje</th><th>optLocatario</th><th>tipoIdLocatario</th><th>idLocatario</th><th>nombreLocatario</th><th>generoLocatario</th><th>fechaLocatario</th><th>optHabitual</th><th>tipoIdHabitual</th><th>idHabitual</th><th>nombreHabitual</th><th>generoHabitual</th><th>fechaHabitual</th></thead><tbody><tr><td>Si</td><td></td><td>Si</td><td></td><td>Si</td><td>Cedula De Ciudadania</td><td>125898713</td><td>Cliente AXA</td><td>Femenino</td><td>10061996</td><td>Si</td><td>Cedula De Ciudadania</td><td>89563247</td><td>Habitual AXA</td><td>Femenino</td><td>10061996</td></tr></tbody></table>
+                                        </span>
+                            <span class="evidence">
+                                </span>
+                        </div>
+                    </td>
+
+                        <td width="160" class="SUCCESS-text">
+                                <a href="e01982631db727172d3b41cba7bc70317feeb73c97a9a2d84aa8cd3b4782518a_screenshots.html#screenshots?screenshot=27">
+                                    <img src="0599d409cc05a7941e426de52e17b14caa9e88792cf3d0d9165b3b7470bd9a48.png"
+                                         href="0599d409cc05a7941e426de52e17b14caa9e88792cf3d0d9165b3b7470bd9a48.png"
+                                         class="screenshot"
+                                         width="48" height="48"/>
+                                </a>
+                                <i class="bi bi-arrow-right"></i>
+
+                                <a href="e01982631db727172d3b41cba7bc70317feeb73c97a9a2d84aa8cd3b4782518a_screenshots.html#screenshots?screenshot=32">
+                                    <img src="fc8188029dffee9592c400568324313f2cc1a5825e0c8ee251a2ba14d8e964df.png"
+                                         href="fc8188029dffee9592c400568324313f2cc1a5825e0c8ee251a2ba14d8e964df.png"
+                                         class="screenshot"
+                                         width="48" height="48"/>
+                                </a>
+                        </td>
+                    <td width="130"><span class="top-level-step">SUCCESS</span></td>
+                    <td width="100"><span class="top-level-step">3s 682ms</span></td>
+                </tr>
+                <tr class="test-SUCCESS">
+
+                    <td width="50" class="step-icon">
+                        <a name="4"></a>
+                            <span style="margin-left: 20px;"
+                                  class="top-level-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
+                                </span>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                                <span class="top-level-step">
+                                                And Elijo la oferta ofrecida<br><table class='embedded'><thead><th>producto</th><th>asistencia</th></thead><tbody><tr><td>PLUS</td><td>VIP</td></tr></tbody></table>
+                                        </span>
+                            <span class="evidence">
+                                        <span class="piece-of-evidence">
+                <a name="report-data-98b3449d-5a61-4292-b24b-368f7c61f553"></a>
+                <span>
+                    <button type="button" class="btn btn-success btn-sm" data-toggle="collapse"
+                            data-target="#reportData-EVIDENCE-6-0">
+                        Tiempo
+                    </button>
+                </span>
+                <div class="rest-query-details">
+                    <div class="collapse multi-collapse" id="reportData-EVIDENCE-6-0" tabindex="-1" role="dialog"
+                         aria-labelledby="restModalLabel" aria-hidden="true">
+                        <div class="card">
+                            <h4 class="card-header" id="restModalLabel">
+                                Tiempo
+                            </h4>
+                        </div>
+                        <div class="card-body"><pre>Se esta realizando una espera de 60 segundos</pre></div>
+                    </div>
+                </div>
+                                            </span>
+                                </span>
+                        </div>
+                    </td>
+
+                        <td width="160" class="SUCCESS-text">
+                                <a href="e01982631db727172d3b41cba7bc70317feeb73c97a9a2d84aa8cd3b4782518a_screenshots.html#screenshots?screenshot=33">
+                                    <img src="703d74afa9d263868d891fdd19da2ecb519e696297ebd8e2c30b3794f9b51c0b.png"
+                                         href="703d74afa9d263868d891fdd19da2ecb519e696297ebd8e2c30b3794f9b51c0b.png"
+                                         class="screenshot"
+                                         width="48" height="48"/>
+                                </a>
+                                <i class="bi bi-arrow-right"></i>
+
+                                <a href="e01982631db727172d3b41cba7bc70317feeb73c97a9a2d84aa8cd3b4782518a_screenshots.html#screenshots?screenshot=35">
+                                    <img src="dd887fd2dceaf43cb6d7ab6bb81823bff9ce733493c194decf432d6a486a6e24.png"
+                                         href="dd887fd2dceaf43cb6d7ab6bb81823bff9ce733493c194decf432d6a486a6e24.png"
+                                         class="screenshot"
+                                         width="48" height="48"/>
+                                </a>
+                        </td>
+                    <td width="130"><span class="top-level-step">SUCCESS</span></td>
+                    <td width="100"><span class="top-level-step">1m 2s</span></td>
+                </tr>
+                <tr class="test-SUCCESS">
+
+                    <td width="50" class="step-icon">
+                        <a name="5"></a>
+                            <span style="margin-left: 20px;"
+                                  class="top-level-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
+                                </span>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                                <span class="top-level-step">
+                                                Then Valido guardado exitoso
+                                        </span>
+                            <span class="evidence">
+                                        <span class="piece-of-evidence">
+                <a name="report-data-cff380bf-2649-4285-8ae8-961a0006618d"></a>
+                <span>
+                    <button type="button" class="btn btn-success btn-sm" data-toggle="collapse"
+                            data-target="#reportData-EVIDENCE-7-0">
+                        Tiempo
+                    </button>
+                </span>
+                <div class="rest-query-details">
+                    <div class="collapse multi-collapse" id="reportData-EVIDENCE-7-0" tabindex="-1" role="dialog"
+                         aria-labelledby="restModalLabel" aria-hidden="true">
+                        <div class="card">
+                            <h4 class="card-header" id="restModalLabel">
+                                Tiempo
+                            </h4>
+                        </div>
+                        <div class="card-body"><pre>Se esta realizando una espera de 30 segundos</pre></div>
+                    </div>
+                </div>
+                                            </span>
+                                        <span class="piece-of-evidence">
+                <a name="report-data-e76182ea-5a08-4a7d-a006-4a134dfe0f5e"></a>
+                <span>
+                    <button type="button" class="btn btn-success btn-sm" data-toggle="collapse"
+                            data-target="#reportData-EVIDENCE-7-1">
+                        Tiempo
+                    </button>
+                </span>
+                <div class="rest-query-details">
+                    <div class="collapse multi-collapse" id="reportData-EVIDENCE-7-1" tabindex="-1" role="dialog"
+                         aria-labelledby="restModalLabel" aria-hidden="true">
+                        <div class="card">
+                            <h4 class="card-header" id="restModalLabel">
+                                Tiempo
+                            </h4>
+                        </div>
+                        <div class="card-body"><pre>Se esta realizando una espera de 30 segundos</pre></div>
+                    </div>
+                </div>
+                                            </span>
+                                </span>
+                        </div>
+                    </td>
+
+                        <td width="160" class="SUCCESS-text">
+                                <a href="e01982631db727172d3b41cba7bc70317feeb73c97a9a2d84aa8cd3b4782518a_screenshots.html#screenshots?screenshot=36">
+                                    <img src="fed3f65227c921a47d19c42c9ea7fcfc58742384f90a4967ca690f453ef36b70.png"
+                                         href="fed3f65227c921a47d19c42c9ea7fcfc58742384f90a4967ca690f453ef36b70.png"
+                                         class="screenshot"
+                                         width="48" height="48"/>
+                                </a>
+                                <i class="bi bi-arrow-right"></i>
+
+                                <a href="e01982631db727172d3b41cba7bc70317feeb73c97a9a2d84aa8cd3b4782518a_screenshots.html#screenshots?screenshot=38">
+                                    <img src="175977de95a16c46be23977aba1e22413ffce1c722015169a3547096421e5313.png"
+                                         href="175977de95a16c46be23977aba1e22413ffce1c722015169a3547096421e5313.png"
+                                         class="screenshot"
+                                         width="48" height="48"/>
+                                </a>
+                        </td>
+                    <td width="130"><span class="top-level-step">SUCCESS</span></td>
+                    <td width="100"><span class="top-level-step">1m 1s</span></td>
+                </tr>
+                <tr class="test-SUCCESS">
+
+                    <td width="50" class="step-icon">
+                        <a name="6"></a>
+                            <span style="margin-left: 20px;"
+                                  class="top-level-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
+                                </span>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                                <span class="top-level-step">
+                                                And Valido condigo entregado
+                                        </span>
+                            <span class="evidence">
+                                        <span class="piece-of-evidence">
+                <a name="report-data-827c97e4-17ce-4c61-9be1-ad14d05bc6b1"></a>
+                <span>
+                    <button type="button" class="btn btn-success btn-sm" data-toggle="collapse"
+                            data-target="#reportData-EVIDENCE-8-0">
+                        Tiempo
+                    </button>
+                </span>
+                <div class="rest-query-details">
+                    <div class="collapse multi-collapse" id="reportData-EVIDENCE-8-0" tabindex="-1" role="dialog"
+                         aria-labelledby="restModalLabel" aria-hidden="true">
+                        <div class="card">
+                            <h4 class="card-header" id="restModalLabel">
+                                Tiempo
+                            </h4>
+                        </div>
+                        <div class="card-body"><pre>Se esta realizando una espera de 30 segundos</pre></div>
+                    </div>
+                </div>
+                                            </span>
+                                </span>
+                        </div>
+                    </td>
+
+                        <td width="160" class="SUCCESS-text">
+
+                                <a href="e01982631db727172d3b41cba7bc70317feeb73c97a9a2d84aa8cd3b4782518a_screenshots.html#screenshots?screenshot=39">
+                                    <img src="d56527073987341c37268319a5af5b03e93cbf67e6a12e103942428a9ed779e9.png"
+                                         href="d56527073987341c37268319a5af5b03e93cbf67e6a12e103942428a9ed779e9.png"
+                                         class="screenshot"
+                                         width="48" height="48"/>
+                                </a>
+                        </td>
+                    <td width="130"><span class="top-level-step">SUCCESS</span></td>
+                    <td width="100"><span class="top-level-step">30s 838ms</span></td>
+                </tr>
+            <tr class="test-SUCCESS">
+                    <td colspan="3"></td>
+                <td width="130"><span class="top-level-step"><em>SUCCESS</em></span></td>
+                <td width="100"><span class="top-level-step"><em>319.57s</em></span></td>
+            </tr>
+
+        </table>
+    </div>
+</div>
+
+<div id="beforefooter"></div>
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12">
+            <span class="version">Serenity BDD version 3.3.2</span>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    function toggleDiv(divId) {
+        $("#" + divId).toggle();
+        var imgsrc = $(".img" + divId).attr('src');
+        if (imgsrc == 'images/plus.png') {
+            $(".img" + divId).attr("src", function () {
+                return "images/minus.png";
+            });
+
+        } else {
+            $(".img" + divId).attr("src", function () {
+                return "images/plus.png";
+            });
+        }
+    }
+</script>
+
+
+<script type="text/javascript">
+    //<![CDATA[
+
+    $(document).ready(function () {
+        $('img.screenshot').imgPreview({
+            imgCSS: {
+                width: '500px'
+            },
+            distanceFromCursor: {top: 10, left: -200}
+        });
+    });
+
+    //]]>
+</script>
+<div id="imgPreviewContainer" style="position: absolute; top: 612px; left: 355px; display: none; " class=""><img
+            src="" style="display: none; "></div>
+<div id="imgPreviewContainer2" style="position: absolute; top: 925px; left: 320px; display: none; " class="">
+    <img style="width: 200px; display: none; " src=""></div>
+<div id="imgPreviewWithStyles" style="position: absolute; top: 1272px; left: 321px; display: none; " class="">
+    <img style="height: 200px; opacity: 1; display: none; " src=""></div>
+<div id="imgPreviewWithStyles2" style="display: none; position: absolute; "><img style="height: 200px; "></div>
+<div id="imgPreviewWithStyles3" style="display: none; position: absolute; "><img style="height: 200px; "></div>
+
+</div>
+</body>
+</html>
